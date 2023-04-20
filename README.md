@@ -1,5 +1,4 @@
-# TÍTULO DO PROJETO
-Finance For You
+# FINANCE FOR YOU
 
 `CURSO`
 Análise e Desenvolvimento de Sistemas
