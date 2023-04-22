@@ -35,18 +35,18 @@ Devido à natureza do projeto, a metodologia de projetos adotada pela equipe é 
 A equipe está organizada da seguinte maneira: 
 
 **Scrum Master:** 
-Daniel Diniz,
+Daniel Diniz
 
 **Product Owner:** 
-Lucas Veiga,  
+Lucas Veiga  
 
 **Equipe de Desenvolvimento:**
 Hiago Lourenço,
 Efraim Santos,
-Guilherme Santos,
+Guilherme Santos
 
 **Equipe de Design:** 
-Ricardo Vieira. 
+Ricardo Vieira 
 
 ### Processo
 
