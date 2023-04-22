@@ -16,21 +16,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... | QUERO/PRECISO ...  |PARA ...                 |
 |--------------------|------------------------------------|----------------------------------------|
 | Wilmer Barros      | Poder registrar meus gastos e lucros| Não esquecer de fazê-las               |
-| Ivan Miguel 	| Ver de forma gráfica o destino dos meus gastos. |	Ter uma visão completa do meu balanço mensal. | 
+| Ivan Miguel 	| Ver de forma o destino dos meus gastos. |	Ter uma visão completa do meu balanço mensal. | 
 |Rayssa Ferreira |	Poder inserir novas categorias de conta |	Abranger todas as minhas saídas. | 
 |Ana Luiza |	Registrar meus investimentos. |	Ter o controle sobre os investimentos. |
 |Ana Luiza |	Saber o rendimento dos meus investimentos. |	Ter controle sobre minha receita. |
 |Ivan Miguel |	Conhecer meu perfil de investidor. |	Aprender quais tipos de investimento seria o ideal para mim. |
-
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Rayssa Ferreira | Comparar minhas despesas mensais | Monitorar minha evolução. |
 
 ## Requisitos
 
@@ -40,31 +31,30 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF – 01 |	O site deve permitir ao usuário inserir suas despesas. | ALTA |
+|RF – 02 |	O site deve permitir ao usuário inserir suas receitas. | ALTA |
+|RF – 03 |	O site tem de exibir as despesas por categoria. | ALTA |
+|RF – 04 |	O site tem de exibir seu balanço mensal levando em conta o modelo financeiro aplicado. | ALTA | 
+|RF – 05 |	O site precisa calcular e exibir um cenário de superávit. | MÉDIA |
+|RF – 06 |  O site deve permitir ao usuário inserir seus investimentos. | MÉDIA-ALTA |
+|RF – 07 |	O site tem de calcular o rendimento destes investimentos. | MÉDIA |
+|RF – 08 |	O site tem de informar ao usuário seu perfil de investidor. | BAIXA |
+|RF - 09 |  O site deve filtrar os resultados categorizados por mês. | ALTA | 
+
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF - 01 |	O site deve ser compatível com os principais navegadores do mercado. (Microsoft Edge, Google Chrome, Mozilla Firefox) | ALTA |
+|RNF - 02 |	O site deverá ser responsivo permitindo a visualização em um celular de forma adequada. | ALTA | 
+|RNF - 03 |	O site deve ser publicado em um ambiente acessível publicamente na Internet (GitHub Pages). | ALTA |
+|RNF - 04 |	A aplicação rodará em ambiente web. | ALTA |
+|RNF - 05 |	O sistema deverá ser protegido contra acesso não autorizado. | ALTA | 
+|RNF - 06 |	O site deverá satisfazer os requisitos de qualidade de interfaces web. |MÉDIA-ALTA | 
+|RNF - 07 |	O sistema deverá ser capaz de lidar com no mínimo 5 usuários sem perder nenhuma funcionalidade. | MÉDIA | 
+|RNF - 08 |	A aplicação deverá ser escrita em JavaScript. | ALTA |
 
 ## Restrições
 
@@ -72,12 +62,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|RE - 01 |	A equipe de desenvolvimento se limitará a seis pessoas. |
+|RE – 02 |	O projeto deverá ser entregue até a data: 25/06/2023 |
