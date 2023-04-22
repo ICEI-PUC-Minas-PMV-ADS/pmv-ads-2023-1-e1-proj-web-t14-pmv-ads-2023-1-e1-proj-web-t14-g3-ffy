@@ -9,7 +9,7 @@ Eixo 1 - Projeto: Desenvolvimento de Aplicação Web Front-End
 `SEMESTRE`
 2023/1
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Propõe -se criar um site  que ajude as pessoas a se organizarem financiramente, atavés de ferramentas como dashboard, mostre d e forma rapida e prática ao usuário seu balanço mensal.
 
 ## Integrantes
 
