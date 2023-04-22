@@ -9,25 +9,19 @@
 ![Persona Ivan Miguel](img/Ana%20Luiza.png)
 ![Persona Ivan Miguel](img/Raisa%20Ferreira.png)
 
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
-
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|EU COMO... | QUERO/PRECISO ...  |PARA ...                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| Wilmer Barros      | Poder registrar meus gastos e lucros| Não esquecer de fazê-las               |
+| Ivan Miguel 	| Ver de forma gráfica o destino dos meus gastos. |	Ter uma visão completa do meu balanço mensal. | 
+|Rayssa Ferreira |	Poder inserir novas categorias de conta |	Abranger todas as minhas saídas. | 
+|Ana Luiza |	Registrar meus investimentos. |	Ter o controle sobre os investimentos. |
+|Ana Luiza |	Saber o rendimento dos meus investimentos. |	Ter controle sobre minha receita. |
+|Ivan Miguel |	Conhecer meu perfil de investidor. |	Aprender quais tipos de investimento seria o ideal para mim. |
+
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
