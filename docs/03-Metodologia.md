@@ -26,44 +26,43 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
 ## Gerenciamento de Projeto
+
+Devido à natureza do projeto, a metodologia de projetos adotada pela equipe é a ágil, sendo o Scrum o processo utilizado.
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+A equipe está organizada da seguinte maneira: 
+•	**Scrum Master:** Daniel Diniz 
+•	**Product Owner:** Lucas Veiga  
+•	Equipe de Desenvolvimento 
+o	Hiago Lourenço
+o	Efraim Santos 
+o	Guilherme Santos 
+•	**Equipe de Design** 
+o	Ricardo Vieira 
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+O gerenciamento do projeto, isto é, a organização e distribuição das tarefas, está em desenvolvimento com uso do Trello e estruturado com as seguintes listas:
 
+Backlog: Recebe as tarefas a serem trabalhadas, registra as atividades e representa o Product Backlog, isto é, as funcionalidades pretendidas que o produto tenha.  
+
+A Fazer: É a relação das tarefas decididas no Sprint mais recente.  
+
+Em Andamento: É a relação para onde são deslocadas as tarefas iniciadas.  
+
+Feito: Tarefas concluídas para entrega ao usuário após testes e controle de qualidade, sem mais revisões e prontas para uso.
+
+![Painel Trello de gerenciamento das tarefas](img/Trello_Real.PNG)
+ 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
+|Ambiente |	Plataforma |	Link de Acesso|
+|---------|------------|------------------|
+|Repositório de código fonte| 	GitHub | <a href = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t14-pmv-ads-2023-1-e1-proj-web-t14-g3-ffy/tree/main/src">Código Fonte</a>
 O editor de código foi escolhido porque ele possui uma integração com o
 sistema de versão. As ferramentas de comunicação utilizadas possuem
 integração semelhante e por isso foram selecionadas. Por fim, para criar
