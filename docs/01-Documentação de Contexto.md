@@ -1,6 +1,8 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Desde se organizar nas contas do mês até decidir onde aplicar o seu dinheiro pode ser um problema. A situação tende a piorar ainda mais se a pessoa trabalha e estuda ao mesmo tempo e o pouco tempo que lhe resta, não consegue ficar fazendo contas.
+Com todos estes problemas vindo à tona, torna-se sensato a busca por uma aplicação que de forma rápida e automatizada ajude o usuário a se reorganizar financeiramente; a fim de usar o seu dinheiro da melhor forma possível, e ajude a projetar cenários que considerem o menor desperdício possível.
+
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
