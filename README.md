@@ -9,7 +9,7 @@ Eixo 1 - Projeto: Desenvolvimento de Aplicação Web Front-End
 `SEMESTRE`
 2023/1
 
-Propõe -se criar um site  que ajude as pessoas a se organizarem financiramente, atavés de ferramentas como dashboard, mostre d e forma rapida e prática ao usuário seu balanço mensal.
+Propõe-se criar um site  que ajude as pessoas a se organizarem financeiramente, através de ferramentas como dashboard, mostre de forma rápida e prática ao usuário seu balanço mensal.
 
 ## Integrantes
 
