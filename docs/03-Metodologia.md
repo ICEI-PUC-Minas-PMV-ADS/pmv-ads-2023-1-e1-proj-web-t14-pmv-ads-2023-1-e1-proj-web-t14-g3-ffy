@@ -35,19 +35,18 @@ Devido à natureza do projeto, a metodologia de projetos adotada pela equipe é 
 A equipe está organizada da seguinte maneira: 
 
 **Scrum Master:** 
-Daniel Diniz
+Daniel Diniz,
 
 **Product Owner:** 
-Lucas Veiga  
+Lucas Veiga,  
 
-**Equipe de Desenvolvimento**
+**Equipe de Desenvolvimento:**
+Hiago Lourenço,
+Efraim Santos,
+Guilherme Santos,
 
-Hiago Lourenço
-Efraim Santos
-Guilherme Santos
-
-**Equipe de Design** 
-Ricardo Vieira 
+**Equipe de Design:** 
+Ricardo Vieira. 
 
 ### Processo
 
@@ -71,7 +70,7 @@ As ferramentas empregadas no projeto são:
 |---------|------------|------------------|
 |Repositório de código fonte| 	GitHub | <a href = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t14-pmv-ads-2023-1-e1-proj-web-t14-g3-ffy/tree/main/src">Código Fonte</a>|
 |Documentos do projeto| 	GitHub| <a href = "https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e1-proj-web-t14-pmv-ads-2023-1-e1-proj-web-t14-g3-ffy/tree/main/docs">Documentação</a>|
-|Projeto de Interface e  Wireframes| 	Figma | <a href ="https://www.figma.com/file/IIkq3mkmiyEbH04AJ62Eac/Fluxo-de-Usu%C3%A1rio?node-id=5%3A105&t=cKQeYOXJin4lQLT7-1"></a>|
+|Projeto de Interface e  Wireframes| 	Figma | <a href ="https://www.figma.com/file/IIkq3mkmiyEbH04AJ62Eac/Fluxo-de-Usu%C3%A1rio?node-id=5%3A105&t=cKQeYOXJin4lQLT7-1">Wireframes</a>|
 |Gerenciamento do Projeto 	|Trello 	| <a href ="https://trello.com/b/FTMjKZ8P/projeto-front-end">Gerenciamento</a>|
 |Editor de Código| VisualStudio Code |<a href="https://code.visualstudio.com/">VisualStudio.com</a>|
 |Comunicação | Teams | <a href="https://teams.microsoft.com/_#/school/conversations/Geral?threadId=19:amlkU-mmS8FrFIki66ijN9CgGTeE8mMAqrBLOJr_G4Y1@thread.tacv2&ctx=channel">Equipe do Teams</a>|
