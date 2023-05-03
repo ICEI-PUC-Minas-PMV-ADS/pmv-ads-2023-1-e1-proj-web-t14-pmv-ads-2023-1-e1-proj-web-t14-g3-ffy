@@ -4,7 +4,7 @@ Desde se organizar nas contas do mês até decidir onde aplicar o seu dinheiro p
 Com todos estes problemas vindo à tona, torna-se sensato a busca por uma aplicação que de forma rápida e automatizada ajude o usuário a se reorganizar financeiramente; a fim de usar o seu dinheiro da melhor forma possível, e ajude a projetar cenários que considerem o menor desperdício possível.
 
 
-## Problemaa
+## Problema
 
 O volume de famílias com dívidas atrasadas tem se elevado em todas as faixas de rendimentos. A problemática deve-se, entre outros fatores, à cultura financeira nacional que prioriza consumo em detrimento do planejamento financeiro. Tal planejamento, visa garantir que despesas de médio e grande porte sejam efetuadas sem o comprometimento da renda ao mesmo tempo em que orienta a pessoa a investir seus ganhos de modo a gerar riqueza individual ou familiar.
 
