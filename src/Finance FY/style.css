@@ -1,0 +1,31 @@
+
+.areaStorage {
+    display: flex;
+    gap: 1rem;
+}
+.secaoCadastrada {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#202f33 , #45635b);
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    color: #FFFFFF;
+}
+
+.listaCadastrada {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style-type: none;
+}
+
+.itemCadastrado {
+    display: flex;
+    background: #45635b;
+    border: #71783c 0.2px solid;
+    border-radius: 30px;
+    padding: 5px 8px;
+    justify-content: space-between;
+    box-shadow: #71783c 5px 2px 9px;
+}
