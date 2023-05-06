@@ -57,3 +57,21 @@
     font-size: calc(1rem + (1rem/8))
 }
 
+.botao {
+    background: #71783c;
+    color:#FFFFFF;
+    border-radius: 30px;
+    padding: 5px 8px;
+    border: none;
+    width: 50%
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #202f33;
+    color: #FFFFFF;
+    height: 100px;   
+    margin-top: 3rem;
+}
