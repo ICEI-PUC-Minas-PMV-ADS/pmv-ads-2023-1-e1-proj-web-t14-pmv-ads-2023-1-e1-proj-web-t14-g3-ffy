@@ -2,6 +2,7 @@
 .areaStorage {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 .secaoCadastrada {
     width: 35%;
@@ -29,3 +30,30 @@
     justify-content: space-between;
     box-shadow: #71783c 5px 2px 9px;
 }
+
+.areaResultados {
+    width: calc(70% + 1rem);
+}
+
+.resultados {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.itemResultado:nth-child(2){
+    background: #2C4248;
+}
+
+.itemResultado {
+    display: flex;
+    justify-content: space-between;
+    background: #45635B;
+    padding: 5px 8px;
+    color: #FFFFFF;
+    border-radius: 30px;
+    font-size: calc(1rem + (1rem/8))
+}
+
