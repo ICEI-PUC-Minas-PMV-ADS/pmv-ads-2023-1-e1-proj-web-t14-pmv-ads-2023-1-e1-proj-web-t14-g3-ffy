@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html id="html">
+    <html lang="pt-br">
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,101 +22,125 @@
 
         <body>
 
-
-            <details class="perfilInvest">
-            <section class="cadastro"> 
-                <form class="formularioCadastro">
+            <div class="lateral">
+                <section class="cadastro"> 
                     <h2>Cadastro:</h2>
-                    <select class="campoCadastro">
-                        <option>Despesa</option>
-                        <option>Receita</option>
-                    </select> 
-                    <label for="nome">Nome</label>
-                    <input class="campoCadastro"  type="text" name="nome">
-                    <label for="valor">Valor:</label>
-                    <input class="campoCadastro" type="number" name="valor">
-                </form>
-            </section>
-
-            <details class="perfilInvest">
-                <summary>Conheça o seu perfil de investidor:</summary>
-                <form>
-                    <p>1 - Você possui alguma experiência com investimentos?</p>
-                    <label for="Sim">Sim</label>
-                    <input type="radio" id="Sim" name="XP"> 
-                    <label for="Não">Não</label>
-                    <input type="radio" id="Não" name="XP">
-
-                    <p>2 - O que você mais valoriza no momento de investir?</p>
-                    <label for="Buscar maiores retornos">Buscar maiores retornos </label>
-                    <input type="radio" id="Buscar maiores retornos" name="maisValoriza">
-                    <label for="Equilíbrio entre segurança e rentabilidade">Equilíbrio entre segurança e rentabilidade </label>
-                    <input type="radio" id="Equilíbrio entre segurança e rentabilidade" name="maisValoriza">
-                    <label for="Proteger meu patrimônio, evitando perdas">Proteger meu patrimônio, evitando perdas </label>
-                    <input type="radio" id="Proteger meu patrimônio, evitando perdas" name="maisValoriza">
-
-                    <p>3 - O que você faria se seus investimentos variassem entre retornos positivos e negativos?</p>
-                    <label for="apresentarRisco">Analisaria com tranquilidade, pois esse cenário pode apresentar risco </label>
-                    <input type="radio" id="apresentarRisco" name="retornosPositivosNegativos">
-                    <label for="resgatarTudo">Resgataria tudo </label>
-                    <input type="radio" id="resgatarTudo" name="retornosPositivosNegativos">
-                    <label for="apresentarOportunidade">Analisaria com tranquilidade, pois esse cenário pode apresentar oportunidade </label>
-                    <input type="radio" id="apresentarOportunidade" name="retornosPositivosNegativos">
-
-                    <p>4 - O que você costuma fazer quando recebe um recurso extra?</p>
-                    <label for="acertoVida">Acerto minha vida financeira </label>
-                    <input type="radio" id="acertoVida" name="recursoExtra">
-                    <label for="gastoParte">Gasto a maior parte com experiências que me dão prazer e invisto o restante </label>
-                    <input type="radio" id="gastoParte" name="recursoExtra">
-                    <label for="reservoParte">Reservo alguma parte, mantendo minha estratégia de investimentos </label>
-                    <input type="radio" id="reservoParte" name="recursoExtra">
-                    <label for="maisArrojada">Aproveito para aplicar uma parte em opções mais arrojadas </label>
-                    <input type="radio" id="maisArrojada" name="recursoExtra">
-
-                    <p>5 - Considerando suas necessidades futuras e orçamento, qual é a sua expectativa em relação aos seus investimentos? </p>
-                    <label for="naoPlanejo">Não planejo nesse momento resgatar meus investimentos e nem realizar novas aplicações </label>
-                    <input type="radio" id="naoPlanejo" name="necessidadeFutura">
-                    <label for="novasAplicacoes">Não planejo nesse momento resgatar meus investimentos e pretendo realizar novas aplicações </label>
-                    <input type="radio" id="novasAplicacoes" name="necessidadeFutura">
-                    <label for="possoPrecisar">Posso precisar de parte dos meus investimentos para pagar despesas no curto prazo </label>
-                    <input type="radio" id="possoPrecisar" name="necessidadeFutura">
-                    <label for="complementarRenda">Conto com esses investimentos para complementar minha renda </label>
-                    <input type="radio" id="complementarRenda" name="necessidadeFutura">
-                    <label for="nadaDefinido">Não possuo necessidades futuras e orçamento definido com relação aos investimentos </label>
-                    <input type="radio" id="nadaDefinido" name="necessidadeFutura">
-
-                    
-                </form>
-            </details>
-            <div class="areaStorage">
-            
-                <section class="secaoCadastrada" id="receitas"> 
-                    <h2>Receitas:</h2>
-                    <ul class="listaCadastrada">
-                        <li class="itemCadastrado">Salário <div class="reais">1320</div></li>
-                        <li class = "itemCadastrado">Investimento <div class="reais">200</div></li>
-                    </ul>
-
+                    <form class="formularioCad" id="formularioCad">
+                        <label for="tipo">Tipo de Cadastro:</label>
+                        <select name="tipo" class="campoCadastro">
+                            <option value="despesa">Despesa</option>
+                            <option value="receita">Receita</option>
+                        </select> 
+                        <label for="nome">Nome</label>
+                        <input class="campoCadastro"  type="text" name="nome" id="nome">
+                        <label for="valor">Valor:</label>
+                        <input class="campoCadastro" type="number" step="any" name="valor" id="valor">
+                        <input type="submit" class="botao cadastrar" value="Cadastrar">
+                    </form>
                 </section>
 
-                <section class="secaoCadastrada" id="despesas"> 
-                    <h2>Despesas:</h2>
-                    <ul class="listaCadastrada">
-                        <li class="itemCadastrado">Luz<div class="reais">120</div></li>
-                        <li class = "itemCadastrado">Água<div class="reais">50</div></li>
-                        <li class = "itemCadastrado">Aluguel<div class="reais">700</div></li>
-                    </ul>
-                </section>
+                <details class="perfilInvest">
+                    <summary>Conheça o seu perfil de investidor:</summary>
+                    <form class="formInvest">
 
-                <section class="areaResultados">
-                    <ul class="resultados">
-                        <li class="itemResultado">Total de Despesas:<div class="reais">870</div></li>
-                        <li class="itemResultado">Remanescente:<div class="reais">650</div></li>
-                    </ul>
-                    <input type="button" value="Voltar" class="botao"><input type="button" value="Enviar Dados" class="botao">
-                </section>
+                        <div>
+                            <p>1 - Você possui alguma experiência com investimentos?</p>
+                            <input type="radio" id="Sim" name="XP"> 
+                            <label for="Sim">Sim</label>
+                            <br>
+                            <input type="radio" id="Não" name="XP">
+                            <label for="Não">Não</label>
+                        </div>
 
+                        <div>
+                            <p>2 - O que você mais valoriza no momento de investir?</p>
+                            <input type="radio" id="Buscar maiores retornos" name="maisValoriza">
+                            <label for="Buscar maiores retornos">Buscar maiores retornos </label>
+                            <br>
+                            <input type="radio" id="Equilíbrio entre segurança e rentabilidade" name="maisValoriza">
+                            <label for="Equilíbrio entre segurança e rentabilidade">Equilíbrio entre segurança e rentabilidade </label>
+                            <br>
+                            <input type="radio" id="Proteger meu patrimônio, evitando perdas" name="maisValoriza">
+                            <label for="Proteger meu patrimônio, evitando perdas">Proteger meu patrimônio, evitando perdas </label>
+                            <br>
+                        </div>
+
+                        <div>
+                            <p>3 - O que você faria se seus investimentos variassem entre retornos positivos e negativos?</p>
+                            <input type="radio" id="apresentarRisco" name="retornosPositivosNegativos">
+                            <label for="apresentarRisco">Analisaria com tranquilidade, pois esse cenário pode apresentar risco </label>
+                            <br>
+                            <input type="radio" id="resgatarTudo" name="retornosPositivosNegativos">
+                            <label for="resgatarTudo">Resgataria tudo </label>
+                            <br>
+                            <input type="radio" id="apresentarOportunidade" name="retornosPositivosNegativos">
+                            <label for="apresentarOportunidade">Analisaria com tranquilidade, pois esse cenário pode apresentar oportunidade </label>
+                        </div>
+                        
+                        <div>
+                            <p>4 - O que você costuma fazer quando recebe um recurso extra?</p>
+                            <input type="radio" id="acertoVida" name="recursoExtra">
+                            <label for="acertoVida">Acerto minha vida financeira </label>
+                            <br>
+                            <input type="radio" id="gastoParte" name="recursoExtra">
+                            <label for="gastoParte">Gasto a maior parte com experiências que me dão prazer e invisto o restante </label>
+                            <br>
+                            <input type="radio" id="reservoParte" name="recursoExtra">
+                            <label for="reservoParte">Reservo alguma parte, mantendo minha estratégia de investimentos </label>
+                            <br>
+                            <input type="radio" id="maisArrojada" name="recursoExtra">
+                            <label for="maisArrojada">Aproveito para aplicar uma parte em opções mais arrojadas </label>
+                            <br>
+                        </div>
+                        
+                        <div>
+                            <p>5 - Considerando suas necessidades futuras e orçamento, qual é a sua expectativa em relação aos seus investimentos? </p>
+                            <input type="radio" id="naoPlanejo" name="necessidadeFutura">
+                            <label for="naoPlanejo">Não planejo nesse momento resgatar meus investimentos e nem realizar novas aplicações </label>
+                            <br>
+                            <input type="radio" id="novasAplicacoes" name="necessidadeFutura">
+                            <label for="novasAplicacoes">Não planejo nesse momento resgatar meus investimentos e pretendo realizar novas aplicações </label>
+                            <br>
+                            <input type="radio" id="possoPrecisar" name="necessidadeFutura">
+                            <label for="possoPrecisar">Posso precisar de parte dos meus investimentos para pagar despesas no curto prazo </label>
+                            <br>
+                            <input type="radio" id="complementarRenda" name="necessidadeFutura">
+                            <label for="complementarRenda">Conto com esses investimentos para complementar minha renda </label>
+                            <br>
+                            <input type="radio" id="nadaDefinido" name="necessidadeFutura">
+                            <label for="nadaDefinido">Não possuo necessidades futuras e orçamento definido com relação aos investimentos </label>
+                            <br>
+                        </div>
+
+                        <input type="submit" class="cadastrar botao" id="descubra">
+                    </form>
+                </details>
             </div>
+            <div class="areaStorage">
+                    <section class="secaoCadastrada"> 
+                        <h2>Receitas:</h2>
+                        <ul class="listaCadastrada" id="receitas"></ul>
+
+                    </section>
+
+                    <section class="secaoCadastrada"> 
+                        <h2>Despesas:</h2>
+                        <ul class="listaCadastrada" id="despesas">
+                        </ul>
+                    </section>
+                
+                    
+                    <section class="areaResultados">
+                        <ul class="resultados">
+                            <li class="itemResultado">Total de Despesas:<div class="reais" id="totalDespesa"></div></li>
+                            <li class="itemResultado">Remanescente:<div class="reais" id="totalRemanescente"></div></li>
+                        </ul>
+                        <a href="homePage.html">
+                        <input type="button" value="Voltar" class="botao"></a><input type="button" value="Enviar Dados" class="botao" id="botaoPrincipal">
+                    </section>
+            </div>
+                    
+            <script src="app.js"></script>
         </body>
 
         <footer>
