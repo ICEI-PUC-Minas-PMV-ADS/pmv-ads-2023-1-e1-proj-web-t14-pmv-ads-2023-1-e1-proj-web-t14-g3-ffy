@@ -1,8 +1,40 @@
+html {
+    font-family: 'Kalam', cursive;
+}
+
+header {
+    height:100px
+}
+
+body {
+    background: linear-gradient(#45635B ,#202f33 70%);
+}
+
+.reais:before {
+    content: "R$ "
+}
+.reais:after {
+    content: ",00";
+}
+
+h1,h2,h3,
+h4,h5,h6,
+summary, .botao {
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.perfilInvest {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
 
 .areaStorage {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 .secaoCadastrada {
     width: 35%;
@@ -19,6 +51,7 @@
     flex-direction: column;
     gap: 5px;
     list-style-type: none;
+    padding: 5px 8px;
 }
 
 .itemCadastrado {
@@ -33,14 +66,17 @@
 
 .areaResultados {
     width: calc(70% + 1rem);
+    
 }
 
 .resultados {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     gap: 5px;
+    padding-inline-start: 0;
 }
 
 .itemResultado:nth-child(2){
@@ -48,9 +84,11 @@
 }
 
 .itemResultado {
+    justify-content: flex-start;
     display: flex;
     justify-content: space-between;
     background: #45635B;
+    width: 100%;
     padding: 5px 8px;
     color: #FFFFFF;
     border-radius: 30px;
@@ -60,10 +98,12 @@
 .botao {
     background: #71783c;
     color:#FFFFFF;
+    font-weight: bold;
     border-radius: 30px;
     padding: 5px 8px;
     border: none;
-    width: 50%
+    width: 50%;
+    margin: 10px 0;
 }
 
 footer {
@@ -73,5 +113,5 @@ footer {
     background: #202f33;
     color: #FFFFFF;
     height: 100px;   
-    margin-top: 3rem;
+    width: 100%;
 }

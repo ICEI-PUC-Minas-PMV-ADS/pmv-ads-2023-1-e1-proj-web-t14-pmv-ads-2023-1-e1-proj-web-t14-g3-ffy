@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-    <html>
+    <html id="html">
         <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             
             <title>Finance FY</title>
+            
             <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">    
         </head>
 
+        <header>
+
+        </header>
+
         <body>
-            <details>
+
+            <details class="perfilInvest">
                 <summary>Conheça o seu perfil de investidor:</summary>
                 <form>
-                    <p>Você possui alguma experiência com investimentos?</p>
+                    <p>1 - Você possui alguma experiência com investimentos?</p>
                     <label for="Sim">Sim</label>
                     <input type="radio" id="Sim" name="XP"> 
                     <label for="Não">Não</label>
                     <input type="radio" id="Não" name="XP">
 
-                    <p>O que você mais valoriza no momento de investir?</p>
+                    <p>2 - O que você mais valoriza no momento de investir?</p>
                     <label for="Buscar maiores retornos">Buscar maiores retornos </label>
                     <input type="radio" id="Buscar maiores retornos" name="maisValoriza">
                     <label for="Equilíbrio entre segurança e rentabilidade">Equilíbrio entre segurança e rentabilidade </label>
@@ -27,7 +39,7 @@
                     <label for="Proteger meu patrimônio, evitando perdas">Proteger meu patrimônio, evitando perdas </label>
                     <input type="radio" id="Proteger meu patrimônio, evitando perdas" name="maisValoriza">
 
-                    <p>O que você faria se seus investimentos variassem entre retornos positivos e negativos?</p>
+                    <p>3 - O que você faria se seus investimentos variassem entre retornos positivos e negativos?</p>
                     <label for="apresentarRisco">Analisaria com tranquilidade, pois esse cenário pode apresentar risco </label>
                     <input type="radio" id="apresentarRisco" name="retornosPositivosNegativos">
                     <label for="resgatarTudo">Resgataria tudo </label>
@@ -35,7 +47,7 @@
                     <label for="apresentarOportunidade">Analisaria com tranquilidade, pois esse cenário pode apresentar oportunidade </label>
                     <input type="radio" id="apresentarOportunidade" name="retornosPositivosNegativos">
 
-                    <p>O que você costuma fazer quando recebe um recurso extra?</p>
+                    <p>4 - O que você costuma fazer quando recebe um recurso extra?</p>
                     <label for="acertoVida">Acerto minha vida financeira </label>
                     <input type="radio" id="acertoVida" name="recursoExtra">
                     <label for="gastoParte">Gasto a maior parte com experiências que me dão prazer e invisto o restante </label>
@@ -45,7 +57,7 @@
                     <label for="maisArrojada">Aproveito para aplicar uma parte em opções mais arrojadas </label>
                     <input type="radio" id="maisArrojada" name="recursoExtra">
 
-                    <p>Considerando suas necessidades futuras e orçamento, qual é a sua expectativa em relação aos seus investimentos? </p>
+                    <p>5 - Considerando suas necessidades futuras e orçamento, qual é a sua expectativa em relação aos seus investimentos? </p>
                     <label for="naoPlanejo">Não planejo nesse momento resgatar meus investimentos e nem realizar novas aplicações </label>
                     <input type="radio" id="naoPlanejo" name="necessidadeFutura">
                     <label for="novasAplicacoes">Não planejo nesse momento resgatar meus investimentos e pretendo realizar novas aplicações </label>
@@ -60,13 +72,13 @@
                     
                 </form>
             </details>
-            
             <div class="areaStorage">
+            
                 <section class="secaoCadastrada" id="receitas"> 
                     <h2>Receitas:</h2>
                     <ul class="listaCadastrada">
-                        <li class="itemCadastrado">Salário <div>1320</div></li>
-                        <li class = "itemCadastrado">Investimento <div>200</div></li>
+                        <li class="itemCadastrado">Salário <div class="reais">1320</div></li>
+                        <li class = "itemCadastrado">Investimento <div class="reais">200</div></li>
                     </ul>
 
                 </section>
@@ -74,16 +86,16 @@
                 <section class="secaoCadastrada" id="despesas"> 
                     <h2>Despesas:</h2>
                     <ul class="listaCadastrada">
-                        <li class="itemCadastrado">Luz<div>120</div></li>
-                        <li class = "itemCadastrado">Água<div>50</div></li>
-                        <li class = "itemCadastrado">Aluguel<div>700</div></li>
+                        <li class="itemCadastrado">Luz<div class="reais">120</div></li>
+                        <li class = "itemCadastrado">Água<div class="reais">50</div></li>
+                        <li class = "itemCadastrado">Aluguel<div class="reais">700</div></li>
                     </ul>
                 </section>
 
                 <section class="areaResultados">
                     <ul class="resultados">
-                        <li class="itemResultado">Total de Despesas:<div>870</div></li>
-                        <li class="itemResultado">Remanescente:<div>650</div></li>
+                        <li class="itemResultado">Total de Despesas:<div class="reais">870</div></li>
+                        <li class="itemResultado">Remanescente:<div class="reais">650</div></li>
                     </ul>
                     <input type="button" value="Voltar" class="botao"><input type="button" value="Enviar Dados" class="botao">
                 </section>
