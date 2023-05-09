@@ -29,6 +29,22 @@ summary, .botao {
     width: 20%;
 }
 
+
+.cadastro {
+    background:#202f33; 
+    color:#FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.campoCadastro {
+    background:#45635B;
+    color:#FFFFFF;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 5px;
+}
+
 .areaStorage {
     display: flex;
     gap: 1rem;
