@@ -33,7 +33,22 @@
 
             <div class="lateral">
                 <section class="cadastro"> 
+            <div class="lateral">
+                <section class="cadastro"> 
                     <h2>Cadastro:</h2>
+                    <form class="formularioCad" id="formularioCad">
+                        <label for="tipo">Tipo de Cadastro:</label>
+                        <select name="tipo" class="campoCadastro">
+                            <option value="despesa">Despesa</option>
+                            <option value="receita">Receita</option>
+                        </select> 
+                        <label for="nome">Nome</label>
+                        <input class="campoCadastro"  type="text" name="nome" id="nome">
+                        <label for="valor">Valor:</label>
+                        <input class="campoCadastro" type="number" step="any" name="valor" id="valor">
+                        <input type="submit" class="botao cadastrar" value="Cadastrar">
+                    </form>
+                </section>
                     <form class="formularioCad" id="formularioCad">
                         <label for="tipo">Tipo de Cadastro:</label>
                         <select name="tipo" class="campoCadastro">
@@ -129,7 +144,11 @@
                     <section class="secaoCadastrada"> 
                         <h2>Receitas:</h2>
                         <ul class="listaCadastrada" id="receitas"></ul>
+                    <section class="secaoCadastrada"> 
+                        <h2>Receitas:</h2>
+                        <ul class="listaCadastrada" id="receitas"></ul>
 
+                    </section>
                     </section>
 
                     <section class="secaoCadastrada"> 
@@ -147,7 +166,24 @@
                         <a href="homePage.html">
                         <input type="button" value="Voltar" class="botao"></a><input type="button" value="Enviar Dados" class="botao" id="botaoPrincipal">
                     </section>
+                    <section class="secaoCadastrada"> 
+                        <h2>Despesas:</h2>
+                        <ul class="listaCadastrada" id="despesas">
+                        </ul>
+                    </section>
+                
+                    
+                    <section class="areaResultados">
+                        <ul class="resultados">
+                            <li class="itemResultado">Total de Despesas:<div class="reais" id="totalDespesa"></div></li>
+                            <li class="itemResultado">Remanescente:<div class="reais" id="totalRemanescente"></div></li>
+                        </ul>
+                        <a href="homePage.html">
+                        <input type="button" value="Voltar" class="botao"></a><input type="button" value="Enviar Dados" class="botao" id="botaoPrincipal">
+                    </section>
             </div>
+                    
+            <script src="app.js"></script>
                     
             <script src="app.js"></script>
         </body>
