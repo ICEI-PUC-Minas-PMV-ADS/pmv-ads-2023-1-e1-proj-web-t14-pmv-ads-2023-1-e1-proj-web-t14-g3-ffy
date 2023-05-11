@@ -50,8 +50,9 @@ header {
 
 .containerCabec {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 .imgCabecalho {
@@ -60,12 +61,12 @@ header {
 
 .imgLogo {
     position: absolute;
-    height: 15%;
+    width: 17%;
     
 } 
 
 .menuNav {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -83,10 +84,6 @@ header {
 .itemNav:hover {
     text-shadow: #efb810 3px 4px 7px;
     font-size: 1.8rem;
-}
-
-.reais:before {
-    content: "R$ "
 }
 
 .cadastro {
@@ -218,6 +215,9 @@ header {
     font-size: calc(1rem + (1rem/8))
 }
 
+.reais:before {
+    content: "R$ "
+}
 
 footer {
     display: flex;
@@ -234,10 +234,6 @@ footer {
 @media screen and (max-width: 900px) {
     html {
         font-size: 0.8rem;
-    }
-
-    .imgLogo {
-        height: 13%;
     }
 
     .itemNav {
@@ -269,10 +265,6 @@ footer {
         font-size: 0.6rem;
     }
 
-    .imgLogo{
-        height: 12%;
-    }
-
     .secaoCadastrada {
         width: 70%;
     }
@@ -284,16 +276,22 @@ footer {
 }
 
 @media screen and (max-width:580px){
-    
-    .imgLogo {
-        height: 9.5%;
-    }
 
     .itemNav{
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 
     .perfilInvest {
         display: none;
+    }
+}
+
+@media screen and (max-width:380px) {
+    html {
+        font-size: 0.55rem;
+    }
+
+    .itemNav {
+        font-size: 0.8rem;
     }
 }

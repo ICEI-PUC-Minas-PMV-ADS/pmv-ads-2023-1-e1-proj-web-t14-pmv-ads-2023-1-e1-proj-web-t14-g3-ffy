@@ -26,6 +26,7 @@ formulario.addEventListener('submit' , (evento) => {
     storage.push(item);
     
     if (parseInt(item.valor) > 0 && item.nome != ""){
+
         criaReceita(item);
     }
     else{
@@ -69,7 +70,6 @@ function criaReceita(item) {
 function calculaTotal(receita,despesa) {
     const totalRemanescente = document.querySelector('#totalRemanescente');
     const mostraDespesa = document.querySelector('#totalDespesa');
-
     const remanescenteFormatado = receita - despesa;
     const despesaFormatado = despesa;
 
