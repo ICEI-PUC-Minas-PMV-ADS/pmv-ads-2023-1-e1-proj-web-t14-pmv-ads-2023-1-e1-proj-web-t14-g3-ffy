@@ -36,7 +36,8 @@ body::-webkit-scrollbar-thumb{
 
 .lateral {
     display: flex;
-    flex-direction: column; float: left;
+    flex-direction: column; 
+    float: left;
     width: 30%;
 }
 
@@ -294,4 +295,75 @@ footer {
     .itemNav {
         font-size: 0.8rem;
     }
+}
+
+/* A partir desse ponto, CSS específico da home-page */
+.tituloSecao{
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.educacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 20px;
+    width: 30%;
+    float: left;
+}
+
+.listaEducativa {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.artigoFinanceiro {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #202f33;
+    padding: 0 100px;
+    border-radius: 30px;
+    
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    background: #202f33;
+    gap: 10px;
+    padding: 20px;
+    width: 65%;
+    float: right;
+}
+
+.textoApr {
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+.quemSomos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    float: right;
+    background: #202f33;
+    padding: 20px;
+    margin-top: 10px;
+    width: 65%;
+    float: right;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.descDev {
+    width: calc(100%/6);
+}
+.imagemDev {
+   width: 50%;
+    border-radius: 50%;
 }
