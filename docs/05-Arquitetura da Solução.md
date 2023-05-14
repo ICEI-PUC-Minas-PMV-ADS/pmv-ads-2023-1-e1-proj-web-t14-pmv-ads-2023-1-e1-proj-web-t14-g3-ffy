@@ -16,7 +16,7 @@ A solução implementada conta com os seguintes módulos:
      - **Saldo** - Dados de todos os meses referentes ao saldo acumulado do usuário.
  - **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
 
-![Fluxo do usuário](img/Arquitetura1.PNG)
+![Fluxo do usuário](img/Arquitetura1.png)
 <center>Fluxo de usuário</center>
 
 
