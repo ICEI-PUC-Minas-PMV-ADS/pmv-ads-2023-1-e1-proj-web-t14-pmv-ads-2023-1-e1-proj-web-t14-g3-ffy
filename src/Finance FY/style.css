@@ -91,6 +91,31 @@ header {
     font-size: 1.8rem;
 }
 
+.mesVig {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.625rem;
+    color: #FFFFFF;
+}
+
+.mes {
+    border: none;
+    border-radius: 30px;
+    background: #a0aa55;
+    color: #FFFFFF;
+    padding: 0.3rem 1.25rem;
+}
+
+.mes:hover {
+    cursor: pointer;
+}
+
+.mes:active {
+    background: #50552b;
+}
+
 .cadastro {
     display: flex;
     flex-direction: column;
@@ -410,5 +435,3 @@ footer {
     .quemSomos {
         width: 50%;
     }
-
-    flex-wrap:wrap;

@@ -2,12 +2,28 @@ const formulario = document.querySelector('#formularioCad');
 const botaoPrincipal = document.querySelector('#botaoPrincipal');
 const listaDespesa = document.querySelector('#despesas');
 const listaReceita = document.querySelector('#receitas');
+
+var mesVig = ""
 var totalDespesa = 0
 var totalReceita = 0
 const storage = JSON.parse(localStorage.getItem('item')) || [];
 
-storage.forEach((element) =>{
-    criaReceita(element);
+listaMes.addEventListener('click' , (evento) => {
+    mesVig = evento.target.value;
+    
+    // Zerando tudo a cada click
+    listaDespesa.innerHTML = "";
+    listaReceita.innerHTML = "";
+    totalDespesa = 0;
+    totalReceita = 0;
+    
+    //Imprime os itens iniciais. condicional verifica mes escolhido
+    storage.forEach((element) =>{
+
+        if(element.mes === mesVig){
+            criaReceita(element);
+        }
+    })
 })
 
 formulario.addEventListener('submit' , (evento) => {
@@ -21,17 +37,24 @@ formulario.addEventListener('submit' , (evento) => {
     const item = {
         "nome" : nome.value ,
         "valor" : valor.value ,
-        "tipo" : tipo.value
+        "tipo" : tipo.value,
+        "mes" : mesVig
     }
-    storage.push(item);
     
-    if (parseInt(item.valor) > 0 && item.nome != ""){
-
+    if (parseInt(item.valor >= 0)) {
+        alert("Valor inválido")
+    }
+    else if (item.nome === ""){
+        alert("Nome inválido")
+    }
+    else if (item.mes === ""){
+        alert("Favor selecionar um mês!")
+    }
+    else {
+        storage.push(item);
         criaReceita(item);
     }
-    else{
-        alert("Valor ou nome inválido")
-    }
+
 
     // **LocalStorage**
     const json = JSON.stringify(storage);
@@ -56,11 +79,15 @@ function criaReceita(item) {
 
         if(item.tipo === 'despesa'){
             listaDespesa.appendChild(novoItem);
-            totalDespesa += parseFloat(item.valor);
+            if(item.mes === mesVig){
+                totalDespesa += parseFloat(item.valor);
+            }
         }
         else{
             listaReceita.appendChild(novoItem);
-            totalReceita += parseFloat(item.valor);
+            if (item.mes === mesVig){
+                totalReceita += parseFloat(item.valor);
+            }
         }
 
         calculaTotal(totalReceita, totalDespesa) 
