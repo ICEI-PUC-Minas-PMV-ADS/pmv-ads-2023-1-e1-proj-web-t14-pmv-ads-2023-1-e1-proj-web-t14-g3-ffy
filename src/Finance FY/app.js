@@ -6,7 +6,11 @@ const listaMes = document.querySelector('#listaMes');
 const totalRemanescente = document.querySelector('#totalRemanescente');
 const mostraDespesa = document.querySelector('#totalDespesa');
 
-var mesVig = ""
+//Variáveis que guardam os campos preenchiveis
+var valor;
+var nome;
+
+var mesVig = "";
 var totalDespesa = 0;
 var totalReceita = 0;
 
@@ -14,20 +18,16 @@ const storage = JSON.parse(localStorage.getItem('item')) || [];
 
 listaMes.addEventListener('click' , (evento) => {
     mesVig = evento.target.value;
-    
-    // Zerando tudo a cada click
-    totalDespesa = 0;
-    totalReceita = 0;
+
     listaDespesa.innerHTML = "";
     listaReceita.innerHTML = "";
-    totalRemanescente.innerHTML =  "";
-    mostraDespesa.innerHTML = "";
-    
+    calculaTotal()
+
     //Imprime os itens iniciais. condicional verifica mes escolhido
     storage.forEach((element) =>{
 
         if(element.mes === mesVig){
-            criaReceita(element);
+            criaItem(element);
         }
     })
 })
@@ -35,8 +35,8 @@ listaMes.addEventListener('click' , (evento) => {
 formulario.addEventListener('submit' , (evento) => {
     evento.preventDefault();
     
-    const valor = evento.target['valor'];
-    const nome = evento.target['nome'];
+    valor = evento.target['valor'];
+    nome = evento.target['nome'];
     const tipo = evento.target['tipo'];
     
     //construindo e adicionando o item
@@ -47,23 +47,33 @@ formulario.addEventListener('submit' , (evento) => {
         "mes" : mesVig
     }
     
-    console.log(item.valor)
+
+    const procuraExistente = storage.find(element => element.nome === item.nome && element.mes === item.mes && element.tipo === item.tipo);
+   
     if (item.valor === ""){
-        alert("Valor inválido")
+        alert("Valor inválido");
     }
     else if (item.nome === ""){
-        alert("Nome inválido")
+        alert("Nome inválido");
     }
     else if (item.mes === ""){
-        alert("Favor selecionar um mês!")
+        alert("Favor selecionar um mês!");
     }
     else {
-        storage.push(item);
-        criaReceita(item);
-        
-        //Fazendo o campo ficar vazio após o submit
-        valor.value = ""
-        nome.value = ""
+        if (procuraExistente){
+            item.id = procuraExistente.id;
+            atualizaItem(item);
+        }
+        else {
+            item.id = storage[storage.length -1] ? (storage[storage.length -1]).id + 1 : 0; 
+            
+            criaItem(item);
+            storage.push(item);
+            
+            //Fazendo o campo ficar vazio após o submit
+            valor.value = "";
+            nome.value = "";
+        }
     }
     
 
@@ -73,11 +83,13 @@ formulario.addEventListener('submit' , (evento) => {
     
 })
 
-function criaReceita(item) {
+function criaItem(item) {
 
     //Essa função é responsável por criar o Elemento e por fazer o somatório do total acada loop.
         const novoItem = document.createElement('li');
         const divValor = document.createElement('div');
+
+        divValor.dataset.id = item.id
 
         novoItem.classList.add("itemCadastrado");
         divValor.classList.add("reais");
@@ -85,31 +97,61 @@ function criaReceita(item) {
         novoItem.innerHTML += item.nome;
         novoItem.appendChild(divValor);
 
-        if(item.tipo === 'despesa'){
-            listaDespesa.appendChild(novoItem);
-            if(item.mes === mesVig){
-                totalDespesa += parseFloat(item.valor);
+        if (item.mes === mesVig){
+            if(item.tipo === 'despesa'){
+                listaDespesa.appendChild(novoItem);
+                
+            }
+            else{
+                listaReceita.appendChild(novoItem);
             }
         }
-        else{
-            listaReceita.appendChild(novoItem);
-            if (item.mes === mesVig){
-                totalReceita += parseFloat(item.valor);
+        calculaTotal(item);
+    }
+
+    
+function calculaTotal() {
+
+    totalDespesa = 0;
+    totalReceita = 0;
+    totalRemanescente.innerHTML =  "";
+    mostraDespesa.innerHTML = "";
+    
+    
+    storage.forEach((element) => {
+        
+        if (element.mes === mesVig){
+            if(element.tipo === 'despesa'){
+                totalDespesa += parseFloat(element.valor);
+            }
+            else {
+                totalReceita += parseFloat(element.valor);
             }
         }
 
-        calculaTotal(totalReceita, totalDespesa) 
+        const remanescenteFormatado = totalReceita - totalDespesa;
+        const despesaFormatado = totalDespesa;
+
+        mostraDespesa.innerHTML = despesaFormatado.toFixed(2);
+        totalRemanescente.innerHTML =  remanescenteFormatado.toFixed(2);
+    })
+
 }
 
 
-function calculaTotal(receita,despesa) {
-    const remanescenteFormatado = receita - despesa;
-    const despesaFormatado = despesa;
+function atualizaItem(item) {
+    document.querySelector("[data-id='"+item.id+"']").innerHTML = item.valor;
 
-    mostraDespesa.innerHTML = despesaFormatado.toFixed(2);
-    totalRemanescente.innerHTML =  remanescenteFormatado.toFixed(2)
+    storage[item.id] = item;
+    const json = JSON.stringify(storage);
+    localStorage.setItem("item" , json);
+
+    calculaTotal()
+    
+    valor.value = ""
+    nome.value = ""
 }
 
 botaoPrincipal.addEventListener('click' , () => {
-    confirm('Você confirma que todos os dados estão corretos?')
+    confirm('Você confirma que todos os dados estão corretos?');
 })
