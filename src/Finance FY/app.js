@@ -2,12 +2,34 @@ const formulario = document.querySelector('#formularioCad');
 const botaoPrincipal = document.querySelector('#botaoPrincipal');
 const listaDespesa = document.querySelector('#despesas');
 const listaReceita = document.querySelector('#receitas');
-var totalDespesa = 0
-var totalReceita = 0
+const listaMes = document.querySelector('#listaMes');
+const totalRemanescente = document.querySelector('#totalRemanescente');
+const mostraDespesa = document.querySelector('#totalDespesa');
+
+var mesVig = ""
+var totalDespesa = 0;
+var totalReceita = 0;
+
 const storage = JSON.parse(localStorage.getItem('item')) || [];
 
-storage.forEach((element) =>{
-    criaReceita(element);
+listaMes.addEventListener('click' , (evento) => {
+    mesVig = evento.target.value;
+    
+    // Zerando tudo a cada click
+    totalDespesa = 0;
+    totalReceita = 0;
+    listaDespesa.innerHTML = "";
+    listaReceita.innerHTML = "";
+    totalRemanescente.innerHTML =  "";
+    mostraDespesa.innerHTML = "";
+    
+    //Imprime os itens iniciais. condicional verifica mes escolhido
+    storage.forEach((element) =>{
+
+        if(element.mes === mesVig){
+            criaReceita(element);
+        }
+    })
 })
 
 formulario.addEventListener('submit' , (evento) => {
@@ -16,30 +38,39 @@ formulario.addEventListener('submit' , (evento) => {
     const valor = evento.target['valor'];
     const nome = evento.target['nome'];
     const tipo = evento.target['tipo'];
-
+    
     //construindo e adicionando o item
     const item = {
         "nome" : nome.value ,
         "valor" : valor.value ,
-        "tipo" : tipo.value
+        "tipo" : tipo.value,
+        "mes" : mesVig
     }
-    storage.push(item);
     
-    if (parseInt(item.valor) > 0 && item.nome != ""){
-
+    console.log(item.valor)
+    if (item.valor === ""){
+        alert("Valor inválido")
+    }
+    else if (item.nome === ""){
+        alert("Nome inválido")
+    }
+    else if (item.mes === ""){
+        alert("Favor selecionar um mês!")
+    }
+    else {
+        storage.push(item);
         criaReceita(item);
+        
+        //Fazendo o campo ficar vazio após o submit
+        valor.value = ""
+        nome.value = ""
     }
-    else{
-        alert("Valor ou nome inválido")
-    }
+    
 
     // **LocalStorage**
     const json = JSON.stringify(storage);
     localStorage.setItem("item" , json);
     
-    //Fazendo o campo ficar vazio após o submit
-    valor.value = ""
-    nome.value = ""
 })
 
 function criaReceita(item) {
@@ -56,11 +87,15 @@ function criaReceita(item) {
 
         if(item.tipo === 'despesa'){
             listaDespesa.appendChild(novoItem);
-            totalDespesa += parseFloat(item.valor);
+            if(item.mes === mesVig){
+                totalDespesa += parseFloat(item.valor);
+            }
         }
         else{
             listaReceita.appendChild(novoItem);
-            totalReceita += parseFloat(item.valor);
+            if (item.mes === mesVig){
+                totalReceita += parseFloat(item.valor);
+            }
         }
 
         calculaTotal(totalReceita, totalDespesa) 
@@ -68,8 +103,6 @@ function criaReceita(item) {
 
 
 function calculaTotal(receita,despesa) {
-    const totalRemanescente = document.querySelector('#totalRemanescente');
-    const mostraDespesa = document.querySelector('#totalDespesa');
     const remanescenteFormatado = receita - despesa;
     const despesaFormatado = despesa;
 
@@ -77,6 +110,6 @@ function calculaTotal(receita,despesa) {
     totalRemanescente.innerHTML =  remanescenteFormatado.toFixed(2)
 }
 
-botaoPrincipal.addEventListener('click' , (e) => {
+botaoPrincipal.addEventListener('click' , () => {
     confirm('Você confirma que todos os dados estão corretos?')
 })
