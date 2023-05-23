@@ -2,26 +2,32 @@ const formulario = document.querySelector('#formularioCad');
 const botaoPrincipal = document.querySelector('#botaoPrincipal');
 const listaDespesa = document.querySelector('#despesas');
 const listaReceita = document.querySelector('#receitas');
+const listaMes = document.querySelector('#listaMes');
+const totalRemanescente = document.querySelector('#totalRemanescente');
+const mostraDespesa = document.querySelector('#totalDespesa');
 
 var mesVig = ""
 var totalDespesa = 0
 var totalReceita = 0
+
 const storage = JSON.parse(localStorage.getItem('item')) || [];
 
 listaMes.addEventListener('click' , (evento) => {
     mesVig = evento.target.value;
     
     // Zerando tudo a cada click
-    listaDespesa.innerHTML = "";
-    listaReceita.innerHTML = "";
     totalDespesa = 0;
     totalReceita = 0;
+    mostraDespesa.innerHTML = "";
+    totalRemanescente.innerHTML = "";
+    listaDespesa.innerHTML = "";
+    listaReceita.innerHTML = "";
     
     //Imprime os itens iniciais. condicional verifica mes escolhido
     storage.forEach((element) =>{
 
         if(element.mes === mesVig){
-            criaReceita(element);
+            criaItem(element);
         }
     })
 })
@@ -41,7 +47,7 @@ formulario.addEventListener('submit' , (evento) => {
         "mes" : mesVig
     }
     
-    if (parseInt(item.valor >= 0)) {
+    if (item.valor === "") {
         alert("Valor inválido")
     }
     else if (item.nome === ""){
@@ -52,7 +58,11 @@ formulario.addEventListener('submit' , (evento) => {
     }
     else {
         storage.push(item);
-        criaReceita(item);
+        criaItem(item);
+        
+        //Fazendo o campo ficar vazio após o submit
+        valor.value = ""
+        nome.value = ""
     }
 
 
@@ -60,12 +70,9 @@ formulario.addEventListener('submit' , (evento) => {
     const json = JSON.stringify(storage);
     localStorage.setItem("item" , json);
     
-    //Fazendo o campo ficar vazio após o submit
-    valor.value = ""
-    nome.value = ""
 })
 
-function criaReceita(item) {
+function criaItem(item) {
 
     //Essa função é responsável por criar o Elemento e por fazer o somatório do total acada loop.
         const novoItem = document.createElement('li');
@@ -77,31 +84,37 @@ function criaReceita(item) {
         novoItem.innerHTML += item.nome;
         novoItem.appendChild(divValor);
 
-        if(item.tipo === 'despesa'){
-            listaDespesa.appendChild(novoItem);
-            if(item.mes === mesVig){
-                totalDespesa += parseFloat(item.valor);
+        if(item.mes === mesVig){
+            if(item.tipo === 'despesa'){
+                listaDespesa.appendChild(novoItem);
             }
-        }
-        else{
-            listaReceita.appendChild(novoItem);
-            if (item.mes === mesVig){
-                totalReceita += parseFloat(item.valor);
+            else{
+                listaReceita.appendChild(novoItem);
             }
         }
 
-        calculaTotal(totalReceita, totalDespesa) 
+        calculaTotal(item) 
 }
 
 
-function calculaTotal(receita,despesa) {
-    const totalRemanescente = document.querySelector('#totalRemanescente');
-    const mostraDespesa = document.querySelector('#totalDespesa');
-    const remanescenteFormatado = receita - despesa;
-    const despesaFormatado = despesa;
+function calculaTotal(item) {
+    
+    if(item.mes === mesVig){
+        if(item.tipo === 'despesa'){
+            totalDespesa += parseFloat(item.valor);
+        }
+        else{
+            totalReceita += parseFloat(item.valor);
+        }
+    }
+
+    const remanescenteFormatado = totalReceita - totalDespesa;
+    const despesaFormatado = totalDespesa;
 
     mostraDespesa.innerHTML = despesaFormatado.toFixed(2);
-    totalRemanescente.innerHTML =  remanescenteFormatado.toFixed(2)
+    totalRemanescente.innerHTML =  remanescenteFormatado.toFixed(2);
+
+
 }
 
 botaoPrincipal.addEventListener('click' , (e) => {
