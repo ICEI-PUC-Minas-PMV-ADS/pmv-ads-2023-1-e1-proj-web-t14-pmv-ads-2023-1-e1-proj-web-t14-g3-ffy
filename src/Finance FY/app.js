@@ -41,7 +41,7 @@ formulario.addEventListener('submit' , (evento) => {
     
     //construindo e adicionando o item
     const item = {
-        "nome" : nome.value ,
+        "nome" : (nome.value).toUpperCase() ,
         "valor" : valor.value ,
         "tipo" : tipo.value,
         "mes" : mesVig
@@ -69,7 +69,7 @@ formulario.addEventListener('submit' , (evento) => {
             
             criaItem(item);
             storage.push(item);
-            
+            calculaTotal();   
             //Fazendo o campo ficar vazio após o submit
             valor.value = "";
             nome.value = "";
@@ -90,13 +90,14 @@ function criaItem(item) {
         const divValor = document.createElement('div');
 
         divValor.dataset.id = item.id
-
+        
         novoItem.classList.add("itemCadastrado");
         divValor.classList.add("reais");
         divValor.innerHTML = item.valor;
         novoItem.innerHTML += item.nome;
         novoItem.appendChild(divValor);
-
+        novoItem.appendChild(botaoDelet(item.id));
+        
         if (item.mes === mesVig){
             if(item.tipo === 'despesa'){
                 listaDespesa.appendChild(novoItem);
@@ -106,7 +107,6 @@ function criaItem(item) {
                 listaReceita.appendChild(novoItem);
             }
         }
-        calculaTotal(item);
     }
 
     
@@ -142,16 +142,39 @@ function calculaTotal() {
 function atualizaItem(item) {
     document.querySelector("[data-id='"+item.id+"']").innerHTML = item.valor;
 
-    storage[item.id] = item;
+    storage[storage.findIndex(elemento => elemento.id === item.id )] = item;
     const json = JSON.stringify(storage);
     localStorage.setItem("item" , json);
 
     calculaTotal()
     
-    valor.value = ""
-    nome.value = ""
+    valor.value = "";
+    nome.value = "";
 }
 
 botaoPrincipal.addEventListener('click' , () => {
     confirm('Você confirma que todos os dados estão corretos?');
 })
+
+function botaoDelet(id) {
+    const botao = document.createElement('button');
+    botao.classList.add('botaoDelet');
+    botao.innerHTML = "Excluir";
+
+    botao.addEventListener('click' , function() {
+        deletaItem(this.parentNode , id);
+    })
+
+    return(botao)
+}
+
+function deletaItem(item, id) {
+    item.remove();
+
+    storage.splice(storage.findIndex(elemento => elemento.id === id) , 1);
+    
+    calculaTotal();
+    
+    const json = JSON.stringify(storage);
+    localStorage.setItem("item" , json);
+}
