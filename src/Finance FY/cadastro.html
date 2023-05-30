@@ -7,8 +7,8 @@
             
             <title>Finance FY</title>
             
-            <link rel="stylesheet" href="reset.css">
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="CSS/reset.css">
+            <link rel="stylesheet" href="CSS/style.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
@@ -67,73 +67,72 @@
 
                     <details class="perfilInvest">
                         <summary>Conheça o seu perfil de investidor:</summary>
-                        <form class="formInvest">
+                        <form class="formInvest" id="formPerfilInv">
 
                             <div>
                                 <p>1 - Você possui alguma experiência com investimentos?</p>
-                                <input class="multiplaEsc" type="radio" id="Sim" name="XP"> 
+                                <input class="multiplaEsc" type="radio" id="Sim" name="XP" value="3"> 
                                 <label for="Sim">Sim</label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="Não" name="XP">
+                                <input class="multiplaEsc" type="radio" id="Não" name="XP" value="1">
                                 <label for="Não">Não</label>
                             </div>
 
                             <div>
                                 <p>2 - O que você mais valoriza no momento de investir?</p>
-                                <input class="multiplaEsc" type="radio" id="Buscar maiores retornos" name="maisValoriza">
+                                <input class="multiplaEsc" type="radio" id="Buscar maiores retornos" name="maisValoriza" value="3">
                                 <label for="Buscar maiores retornos">Buscar maiores retornos </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="Equilíbrio entre segurança e rentabilidade" name="maisValoriza">
+                                <input class="multiplaEsc" type="radio" id="Equilíbrio entre segurança e rentabilidade" name="maisValoriza" value="1">
                                 <label for="Equilíbrio entre segurança e rentabilidade">Equilíbrio entre segurança e rentabilidade </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="Proteger meu patrimônio, evitando perdas" name="maisValoriza">
+                                <input class="multiplaEsc" type="radio" id="Proteger meu patrimônio, evitando perdas" name="maisValoriza" value="2">
                                 <label for="Proteger meu patrimônio, evitando perdas">Proteger meu patrimônio, evitando perdas </label>
                                 <br>
                             </div>
                             <div>
                                 <p>3 - O que você faria se seus investimentos variassem entre retornos positivos e negativos?</p>
-                                <input class="multiplaEsc" type="radio" id="apresentarRisco" name="retornosPositivosNegativos">
+                                <input class="multiplaEsc" type="radio" id="apresentarRisco" name="retornosPositivosNegativos" value="2">
                                 <label for="apresentarRisco">Analisaria com tranquilidade, pois esse cenário pode apresentar risco </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="resgatarTudo" name="retornosPositivosNegativos">
+                                <input class="multiplaEsc" type="radio" id="resgatarTudo" name="retornosPositivosNegativos" value="1">
                                 <label for="resgatarTudo">Resgataria tudo </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="apresentarOportunidade" name="retornosPositivosNegativos">
+                                <input class="multiplaEsc" type="radio" id="apresentarOportunidade" name="retornosPositivosNegativos" value="3">
                                 <label for="apresentarOportunidade">Analisaria com tranquilidade, pois esse cenário pode apresentar oportunidade </label>
                             </div>
                             
                             <div>
                                 <p>4 - O que você costuma fazer quando recebe um recurso extra?</p>
-                                <input class="multiplaEsc" type="radio" id="acertoVida" name="recursoExtra">
+                                <input class="multiplaEsc" type="radio" id="acertoVida" name="recursoExtra" value="1">
                                 <label for="acertoVida">Acerto minha vida financeira </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="gastoParte" name="recursoExtra">
-                                <label for="gastoParte">Gasto a maior parte com experiências que me dão prazer e invisto o restante </label>
-                                
+                                <input class="multiplaEsc" type="radio" id="gastoParte" name="recursoExtra" value="3">
+                                <label for="gastoParte">Gasto a maior parte com experiências que me dão prazer e invisto o restante </label>                                
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="reservoParte" name="recursoExtra">
+                                <input class="multiplaEsc" type="radio" id="reservoParte" name="recursoExtra" value="2">
                                 <label for="reservoParte">Reservo alguma parte, mantendo minha estratégia de investimentos </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="maisArrojada" name="recursoExtra">
+                                <input class="multiplaEsc" type="radio" id="maisArrojada" name="recursoExtra" value="4">
                                 <label for="maisArrojada">Aproveito para aplicar uma parte em opções mais arrojadas </label>
                                 <br>
                             </div>
                             
                             <div>
                                 <p>5 - Considerando suas necessidades futuras e orçamento, qual é a sua expectativa em relação aos seus investimentos? </p>
-                                <input class="multiplaEsc" type="radio" id="naoPlanejo" name="necessidadeFutura">
+                                <input class="multiplaEsc" type="radio" id="naoPlanejo" name="necessidadeFutura" value="3">
                                 <label for="naoPlanejo">Não planejo nesse momento resgatar meus investimentos e nem realizar novas aplicações </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="novasAplicacoes" name="necessidadeFutura">
+                                <input class="multiplaEsc" type="radio" id="novasAplicacoes" name="necessidadeFutura" value="4">
                                 <label for="novasAplicacoes">Não planejo nesse momento resgatar meus investimentos e pretendo realizar novas aplicações </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="possoPrecisar" name="necessidadeFutura">
+                                <input class="multiplaEsc" type="radio" id="possoPrecisar" name="necessidadeFutura" value="2">
                                 <label for="possoPrecisar">Posso precisar de parte dos meus investimentos para pagar despesas no curto prazo </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="complementarRenda" name="necessidadeFutura">
+                                <input class="multiplaEsc" type="radio" id="complementarRenda" name="necessidadeFutura" value="1">
                                 <label for="complementarRenda">Conto com esses investimentos para complementar minha renda </label>
                                 <br>
-                                <input class="multiplaEsc" type="radio" id="nadaDefinido" name="necessidadeFutura">
+                                <input class="multiplaEsc" type="radio" id="nadaDefinido" name="necessidadeFutura" value="">
                                 <label for="nadaDefinido">Não possuo necessidades futuras e orçamento definido com relação aos investimentos </label>
                                 <br>
                             </div>
@@ -167,7 +166,8 @@
                     </section>
             </div>
                     
-            <script src="app.js"></script>
+            <script src="JS/app.js"></script>
+            <script src="JS/app-inv.js"></script>
         </body>
 
         <footer>

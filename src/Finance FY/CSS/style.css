@@ -191,6 +191,21 @@ header {
     box-shadow: #71783c 5px 2px 9px;
 }
 
+.botaoDelet {
+    background: none;
+    border-radius: 50%;
+    border: none ;
+    color: #FFFFFF;
+    transition: 0.5s;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.botaoDelet:hover {
+    cursor: pointer;
+    background: #a50404;
+}
+
 .areaResultados {
     width: 90%;
 }
@@ -436,3 +451,4 @@ footer {
     .quemSomos {
         width: 50%;
     }
+}

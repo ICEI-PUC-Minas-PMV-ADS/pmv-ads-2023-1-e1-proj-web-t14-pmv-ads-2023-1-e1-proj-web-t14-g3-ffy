@@ -23,7 +23,6 @@ listaMes.addEventListener('click' , (evento) => {
     listaReceita.innerHTML = "";
     calculaTotal()
 
-    //Imprime os itens iniciais. condicional verifica mes escolhido
     storage.forEach((element) =>{
 
         if(element.mes === mesVig){
@@ -34,7 +33,6 @@ listaMes.addEventListener('click' , (evento) => {
 
 formulario.addEventListener('submit' , (evento) => {
     evento.preventDefault();
-    
     valor = evento.target['valor'];
     nome = evento.target['nome'];
     const tipo = evento.target['tipo'];
@@ -96,7 +94,7 @@ function criaItem(item) {
         divValor.innerHTML = item.valor;
         novoItem.innerHTML += item.nome;
         novoItem.appendChild(divValor);
-        novoItem.appendChild(botaoDelet(item.id));
+        divValor.appendChild(botaoDelet(item.id));
         
         if (item.mes === mesVig){
             if(item.tipo === 'despesa'){
@@ -138,6 +136,9 @@ function calculaTotal() {
 
 }
 
+botaoPrincipal.addEventListener('click' , () => {
+    confirm('Você confirma que todos os dados estão corretos?');
+})
 
 function atualizaItem(item) {
     document.querySelector("[data-id='"+item.id+"']").innerHTML = item.valor;
@@ -152,14 +153,10 @@ function atualizaItem(item) {
     nome.value = "";
 }
 
-botaoPrincipal.addEventListener('click' , () => {
-    confirm('Você confirma que todos os dados estão corretos?');
-})
-
 function botaoDelet(id) {
     const botao = document.createElement('button');
     botao.classList.add('botaoDelet');
-    botao.innerHTML = "Excluir";
+    botao.innerHTML = "X";
 
     botao.addEventListener('click' , function() {
         deletaItem(this.parentNode , id);
