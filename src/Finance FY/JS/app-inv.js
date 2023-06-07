@@ -10,11 +10,16 @@ function perfilInvestidor () {
     var numResInv = 0;
     marcadas = (document.querySelectorAll('.multiplaEsc:checked'));
     
-    for (var i = 0 ; i < marcadas.length ; i++){
-        numResInv += parseInt(marcadas[i].value);
+    if (marcadas.length < 5) {
+        alert('Favor preencher todas as perguntas')
+    }
+    else{
+        for (var i = 0 ; i < marcadas.length ; i++){
+            numResInv += parseInt(marcadas[i].value);
+        }
+        alert(classificaInvestidor(numResInv));
     }
 
-    alert(classificaInvestidor(numResInv));
 }
 
 function classificaInvestidor(total) {

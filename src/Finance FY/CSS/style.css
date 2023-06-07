@@ -1,74 +1,50 @@
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    
-}
-
-h1,h2,h3,
-h4,h5,h6,
-summary, 
-.botao,
-.cadastrar,
-.itemNav {
-    font-family: 'Bruno Ace SC', cursive;
+:root {
+    --verde-claro_bg: #45635B;
+    --verde-escuro_bg: #202f33; 
+    --cor-texto: #d9d9d9;
+    --gradiente-bg: linear-gradient(#45635B ,#202f33 70%);
+    --dourado-shadow: #efb810;
+    --amarelo-botao: #a0aa55;
+    --cor-botao_ativo: #50552b;
 }
 
 html {
     font-family: 'Kalam', cursive;
-    background: #202f33;
-}
-
-
-
-
-body {
-    background: linear-gradient(#45635B ,#202f33 70%);
-    background-repeat: no-repeat;
-    
+    color: var(--cor-texto);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-    background: linear-gradient(#45635B ,#202f33 70%);
+    background: var(--gradiente-bg);
     border-radius: 30px;
 }
 
 body::-webkit-scrollbar-thumb{
     background: transparent;
     border-radius: 30px;
-    border: #d9d9d9 0.125px solid;
+    border: var(--cor-texto) 0.125px solid;
     height: 10px;
 }
 
-.lateral {
-    display: flex;
-    flex-direction: column; 
-    float: left;
-    width: 30%;
+body {
+    background: var(--gradiente-bg);
 }
 
-/* Formatações não genéricas */
 header {
     display: flex;
-   box-shadow: #000000 0 10px 20px;
-   margin-bottom: 20px;
-   background: #202f33;
+    background: var(--verde-escuro_bg);
+    box-shadow: #000000 0 10px 20px;
 }
 
 .containerCabec {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('../img/logoBg.png');
+    background-repeat: no-repeat;
     width: 50%;
 }
 
-.imgCabecalho {
-    width: 100%;
-}
-
 .imgLogo {
-    position: absolute;
-    width: 17%;
-    
-} 
+    width: 30%;
+}
 
 .menuNav {
     width: 50%;
@@ -81,374 +57,65 @@ header {
 
 .itemNav {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--cor-texto);
     font-size: 1.5rem;
     transition: 0.3s;
 }
 
 .itemNav:hover {
-    text-shadow: #efb810 3px 4px 7px;
+    text-shadow: var(--dourado-shadow) 3px 4px 7px;
     font-size: 1.8rem;
 }
 
-.cadastro {
-    display: flex;
-    flex-direction: column;
-    background:#202f33; 
-    color:#FFFFFF;
+h1,h2,h3,
+h4,h5,h6,
+summary, 
+.botao,
+.cadastrar,
+.itemNav, .atualizar {
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.secao{
     border-radius: 10px;
-    padding: 15px;
+    background: var(--verde-escuro_bg);
+    padding: 10px;  
 }
-
-.formularioCad {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 50%;
-    align-self: flex-end;
-    
-}
-
-.campoCadastro {
-    background:#45635B;
-    color:#FFFFFF;
+.itemContainer{
     border-radius: 30px;
-    font-size: 16px;
-    padding: 2px;
-    border: none;
-    font-size: 0.8rem;
+    color: var(--cor-texto);
+    padding: 0 5px;
 }
 
-.perfilInvest {
+.flexCentral {
     display: flex;
-    background: #45635B;
-    padding: 10px;
-    border-radius: 10px;
-    color: #FFFFFF;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.perfilInvest input:hover {
-    cursor: pointer;
-}
-
-.perfilInvest:hover {
-    cursor: pointer;
-}
-
-.botao {
-    background: #71783c;
-    color:#FFFFFF;
-    font-weight: bold;
-    margin-top: 10px;
-    border-radius: 30px;
-    padding: 2px 5px;
+.botao{
     border: none;
-    align-self: flex-end;
-    transition: 0.5s;
+    background: var(--amarelo-botao);
+    padding: 0.3rem 1rem;
+    margin-top: 0.5rem;
+    transition: 0.3s;
 }
 
 .botao:hover {
     cursor: pointer;
-    background:#50552b;
-    box-shadow: #a0aa55 2px 2px 9px;
-    font-size: 1.012rem;
+    box-shadow: var(--amarelo-botao) 2px 2px 9px;
+    background: var(--cor-botao_ativo);
 }
 
-.areaStorage {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content:space-around ;
-    min-height: 800px;
-    
-}
-.secaoCadastrada {
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(#202f33 , #45635b);
-    border-radius: 10px;
-    padding: 15px;
-    color: #FFFFFF;
-}
-
-.listaCadastrada {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    list-style-type: none;
-    padding: 5px 8px;
-}
-
-.itemCadastrado {
-    display: flex;
-    background: #45635b;
-    border: #71783c 0.2px solid;
-    border-radius: 30px;
-    padding: 5px 8px;
-    justify-content: space-between;
-    box-shadow: #71783c 5px 2px 9px;
-}
-
-.botaoDelet {
-    background: none;
-    border-radius: 50%;
-    border: none ;
-    color: #FFFFFF;
-    transition: 0.5s;
-    margin-left: 0.5rem;
-    font-weight: bold;
-}
-
-.botaoDelet:hover {
-    cursor: pointer;
-    background: #a50404;
-}
-
-.areaResultados {
-    width: 90%;
-}
-
-.resultados {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    padding-inline-start: 0;
-}
-
-.itemResultado:nth-child(2){
-    background: #2C4248;
-}
-
-.itemResultado {
-    justify-content: flex-start;
-    display: flex;
-    justify-content: space-between;
-    background: #45635B;
-    width: 100%;
-    padding: 5px 8px;
-    color: #FFFFFF;
-    border-radius: 30px;
-    font-size: calc(1rem + (1rem/8))
-}
-
-.reais:before {
-    content: "R$ "
+.reais::before {
+    content: "R$ ";
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #202f33;
-    color: #FFFFFF;
-    height: 100px;   
-    width: 100%;
-
-}
-
-
-/* A partir desse ponto, CSS específico da home-page */
-
-.mesVig {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0.625rem;
-    color: #FFFFFF;
-}
-
-.mes {
-    border: none;
-    border-radius: 30px;
-    background: #a0aa55;
-    color: #FFFFFF;
-    padding: 0.3rem 1.25rem;
-}
-
-.mes:hover {
-    cursor: pointer;
-}
-
-.mes:active {
-    background: #50552b;
-}
-
-.tituloSecao{
-    font-size: 1.5rem;
-    color: #FFFFFF;
-}
-
-.educacao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    gap: 20px;
-    width: 30%;
-    float: left;
-}
-
-.listaEducativa {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.artigoFinanceiro {
-    text-decoration: none;
-    color: #FFFFFF;
-    background: #202f33;
-    padding: 0 6rem;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-.artigoFinanceiro:hover {
-    margin: 0 0 0 10px;
-    box-shadow: #efb810 0px 1px 9px;
-}
-
-.apresentacao {
-    display: flex;
-    flex-direction: column;
-    background: #202f33;
-    gap: 10px;
-    padding: 20px;
-    width: 60%;
-    float: right;
-}
-
-.textoApr {
-    padding: 10px;
-    color: #FFFFFF;
-}
-
-.quemSomos{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    float: right;
-    background: #202f33;
-    padding: 20px;
-    margin-top: 10px;
-    width: 60%;
-    float: right;
-}
-.cards{
-    flex-wrap:wrap;
-    display: flex;
-    justify-content: space-around;
-}
-.descDev {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: calc(100%/6);
-    color: #FFFFFF;
-    border: #45635B 1px dashed;
-    padding: 10px;
-}
-
-.imagemDev {
-   width: 50%;
-    border-radius: 50%;
-}
-
-@media screen and (max-width: 900px) {
-    html {
-        font-size: 0.8rem;
-    }
-
-    .itemNav {
-        font-size: 0.6;
-    }
-
-    .formularioCad {
-        width: 90%;
-        margin-top: 10px;
-        align-self: center;
-    }
-    
-    .areaStorage {
-        min-height: auto;
-    }
-
-    .secaoCadastrada {
-        width: 90%;
-    }
-
-    .botao {
-        font-size: 0.7rem;
-    }
-
-    .artigoFinanceiro {
-        padding: 0 4rem;
-    }
-    
-}
-
-@media screen and (max-width: 680px) {
-    html {
-        font-size: 0.6rem;
-    }
-
-    .secaoCadastrada {
-        width: 70%;
-    }
-    
-    .areaResultados {
-        width: 70%;
-    }
-    
-}
-
-@media screen and (max-width:580px){
-
-    .itemNav{
-        font-size: 1rem;
-    }
-
-    .perfilInvest {
-        display: none;
-    }
-
-    .educacao {
-        width: 20%;
-    }
-
-    .tituloSecao {
-        font-size: 0.8rem;
-    }
-
-    .artigoFinanceiro{
-        font-size: 0.5rem;
-        padding: 0 2rem;
-    }
-
-    .listaEducativa {
-        gap: 7px;
-    }
-}
-
-@media screen and (max-width:380px) {
-    html {
-        font-size: 0.55rem;
-    }
-
-    .itemNav {
-        font-size: 0.8rem;
-    }
-
-    .apresentacao,
-    .quemSomos {
-        width: 50%;
-    }
+    background: var(--verde-escuro_bg);
+    height: 100px;
 }

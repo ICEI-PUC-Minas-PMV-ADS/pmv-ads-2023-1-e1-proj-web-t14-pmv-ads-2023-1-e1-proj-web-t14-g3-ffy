@@ -7,8 +7,11 @@
             
             <title>Finance FY</title>
             
-            <link rel="stylesheet" href="reset.css">
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="CSS/reset.css">
+            <link rel="stylesheet" href="CSS/style.css">
+            <link rel="stylesheet" href="CSS/mainIndex.css">
+            <link rel="stylesheet" href="CSS/educacao.css">
+            <link rel="stylesheet" href="CSS/grid/grid-index.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
@@ -17,30 +20,30 @@
             <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">    
         </head>
 
-        <header>
-            <div class="containerCabec">
-            <img src="Img/abstract-constellation-4f-2560x1440 1.png" class="imgCabecalho">
-            <img src="Img/Desktop - 1logo.png" class="imgLogo">
-            </div>
-            <nav class="menuNav">
-                <li><a class="itemNav" href="index.html">Inicio</a></li>
-                <li><a class="itemNav" href="cadastro.html">Cadastro</a></li>
-                <li><a class="itemNav" href="formularios.html">Formulários</a></li>
-            </nav>
-        </header>
-        
         <body>
-                <section class="educacao" >
-                    <h2 class="tituloSecao">Saiba mais:</h2>
-                    <ul class="listaEducativa">
-                        <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                        <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                        <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                        <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                    </ul>
-                </section>
-                
-                <section class="apresentacao">
+            <div class="wrapper">
+            <header>
+                <div class="containerCabec flexCentral">
+                <img src="Img/Desktop - 1logo.png" class="imgLogo">
+                </div>
+                <nav class="menuNav">
+                    <li><a class="itemNav" href="index.html">Inicio</a></li>
+                    <li><a class="itemNav" href="cadastro.html">Cadastro</a></li>
+                    <li><a class="itemNav" href="relatorios.html">Relatórios</a></li>
+                </nav>
+            </header>
+            <aside class="educacao" >
+                <h2 class="tituloSecao">Saiba mais:</h2>
+                <ul class="listaEducativa">
+                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
+                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
+                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
+                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
+                </ul>
+            </aside>
+            
+            <main>
+                <section class="apresentacao secao">
                     <h2 class="tituloSecao">Apresentação:</h2>
                     <div>
                         <p class="textoApr">Bem vindo(a) ao Finance FY, estamos aqui para auxiliar na organização de suas finanças. </p>
@@ -49,46 +52,46 @@
                     </div>
                 </section>
 
-                <section class="quemSomos">
+                <section class="quemSomos secao">
                     <h2 class="tituloSecao">Quem somos:</h2>
                     <div class="cards">
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Daniel Diniz</span>
                             <span>Scrum Master</span>
                         </div>
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Lucas Veiga</span>
                             <span>Product Owner</span>
                         </div>
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Ricardo Vieira</span>
                             <span>Equipe de Design</span>
                         </div>
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Guilherme Santos</span>
                             <span>Desenvolvedor</span>
                         </div>
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Efraim Santos</span>
                             <span>Desenvolvedor</span>
                         </div>
-                        <div class="descDev">
+                        <div class="descDev flexCentral">
                             <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
                             <span>Hiago Lourenço</span>
                             <span>Desenvolvedor</span>
                         </div>
                     </div>
                 </section>
-                
+            </main>
+                            
+            <footer class="flexCentral">
+                <span>Versão: 0.0.1</span>
+            </footer>
+            </div>
         </body>
-        
-        <footer>
-            <span>Versão: 0.0.1</span>
-        </footer>
-        
     </html>

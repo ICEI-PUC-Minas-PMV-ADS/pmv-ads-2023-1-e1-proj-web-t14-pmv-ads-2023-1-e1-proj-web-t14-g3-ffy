@@ -1,0 +1,47 @@
+:root {
+    --verde-claro_bg: #45635B;
+    --dourado-shadow: #efb810;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column; 
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.formularioCad {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+    align-self: flex-end;
+    
+}
+
+.campoCadastro {
+    background: var(--verde-claro_bg);
+    border: none;
+    font-size: 0.8rem;
+}
+
+.campoCadastro:focus {
+    outline: none;
+    box-shadow: var(--dourado-shadow) 2px 2px 9px;
+    border: var(--dourado-shadow) 1px solid;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.perfilInvest:hover{
+    cursor: pointer;
+}
+
+.formInvest {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
