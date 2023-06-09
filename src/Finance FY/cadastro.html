@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="CSS/mainCadastro.css">
     <link rel="stylesheet" href="CSS/cadastro-perfil.css">
     <link rel="stylesheet" href="CSS/grid/grid-cadastro.css">
+    <link rel="stylesheet" href="CSS/responsivo/cad-responsivo.css">
+    <link rel="stylesheet" href="CSS/responsivo/style-responsivo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
@@ -49,15 +51,15 @@
                             <option value="resgate">Resgate de Economia</option>
                         </select>
                         <label for="nome">Nome</label>
-                        <input class="campoCadastro itemContainer" type="text" name="nome" id="nome">
+                        <input class="campoCadastro itemContainer" type="text" name="nome" id="nome" required>
                         <label for="valor">Valor:</label>
-                        <input class="campoCadastro itemContainer" type="number" step="any" name="valor" id="valor">
+                        <input class="campoCadastro itemContainer" type="number" step="any" name="valor" id="valor" required>
                         <input type="submit" class="botao itemContainer" value="Cadastrar">
                     </form>
                 </section>
 
-                <details class="perfilInvest secao">
-                    <summary>Conheça o seu perfil de investidor:</summary>
+                <details class="perfilInvest secao" id="perfilInvest">
+                    <summary id="summary">Conheça o seu perfil de investidor:</summary>
                     <form class="formInvest" id="formPerfilInv">
 
                         <div>
@@ -203,7 +205,7 @@
         </main>
 
         <footer class="flexCentral">
-            <span>Versão: 0.0.1</span>
+            <span>Versão: 0.1.0</span>
         </footer>
     </div>
     <script src="JS/app.js"></script>

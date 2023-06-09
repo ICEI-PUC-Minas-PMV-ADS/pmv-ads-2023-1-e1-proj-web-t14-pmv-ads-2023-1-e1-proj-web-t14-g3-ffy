@@ -15,14 +15,17 @@ main {
     border: none;
     color: var(--cor-texto);
     margin: 10px 0;
+    font-size: 1rem;
 }
 
 .mesAtual:focus {
     outline: none;
 }
 
-.botao{
-    font-size: 0.7rem;
+#submitSimu {
+    order: 1;
+    width: 50%;
+    align-self: flex-end;
 }
 
 .secao {

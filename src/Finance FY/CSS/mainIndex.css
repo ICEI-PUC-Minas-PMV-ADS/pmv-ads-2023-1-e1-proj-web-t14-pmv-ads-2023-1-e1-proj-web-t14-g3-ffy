@@ -7,18 +7,21 @@
 }
 
 .cards {
+    --gapCards: 10px;
     display: flex;
-    justify-content: space-around;
+    gap: var(--gapCards);
     flex-wrap: wrap;
 }
 
 .descDev {
-    --largura-desc: calc(100%/var(--numero-col));
+    --numero-col: 6;
+    --largura-desc:calc(100%/var(--numero-col) - var(--gapCards)) ;
     flex-direction: column;
     border: 1px #ffffff dashed;
-    padding: 10px;
-    gap: var(--gap); 
-    width: var(--largura-desc);
+    padding: 10px; 
+    gap: 5px;
+    box-sizing: border-box;
+    width: var(--largura-desc)
 }
 
 .imagemDev {

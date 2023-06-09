@@ -26,6 +26,16 @@ body::-webkit-scrollbar-thumb{
     height: 10px;
 }
 
+.campoCadastro:focus {
+    outline: none;
+    box-shadow: var(--dourado-shadow) 2px 2px 9px;
+    border: var(--dourado-shadow) 1px solid;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
 body {
     background: var(--gradiente-bg);
 }
@@ -38,12 +48,13 @@ header {
 
 .containerCabec {
     background: url('../img/logoBg.png');
+    background-size: 100%;
     background-repeat: no-repeat;
     width: 50%;
 }
 
 .imgLogo {
-    width: 30%;
+    width: 25%;
 }
 
 .menuNav {
@@ -89,6 +100,16 @@ summary,
     border-radius: 30px;
     color: var(--cor-texto);
     padding: 0 5px;
+}
+
+.campoCadastro {
+    background: var(--verde-claro_bg);
+    border: none;
+    font-size: 0.8rem;
+}
+
+.campoCadastro::placeholder {
+    color: var(--cor-texto);
 }
 
 .flexCentral {

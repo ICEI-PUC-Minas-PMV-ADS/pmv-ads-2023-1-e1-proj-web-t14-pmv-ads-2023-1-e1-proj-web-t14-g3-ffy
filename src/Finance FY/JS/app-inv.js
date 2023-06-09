@@ -1,4 +1,5 @@
 const formularioPerfil = document.querySelector('#formPerfilInv');
+const detailsPerfil = document.querySelector('summary');
 
 formularioPerfil.addEventListener('submit' , (evento) => {
     evento.preventDefault();
@@ -17,7 +18,7 @@ function perfilInvestidor () {
         for (var i = 0 ; i < marcadas.length ; i++){
             numResInv += parseInt(marcadas[i].value);
         }
-        alert(classificaInvestidor(numResInv));
+        detailsPerfil.innerHTML = classificaInvestidor(numResInv);
     }
 
 }

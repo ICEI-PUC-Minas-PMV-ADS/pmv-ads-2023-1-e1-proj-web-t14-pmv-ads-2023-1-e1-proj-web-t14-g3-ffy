@@ -55,16 +55,9 @@ formulario.addEventListener('submit' , (evento) => {
         "mes" : mesVig
     }
     
-
     const procuraExistente = storage.find(element => element.nome === item.nome && element.mes === item.mes && element.tipo === item.tipo);
    
-    if (item.valor === ""){
-        alert("Valor inválido");
-    }
-    else if (item.nome === ""){
-        alert("Nome inválido");
-    }
-    else if (item.mes === ""){
+    if (item.mes === ""){
         alert("Favor selecionar um mês!");
     }
     else {

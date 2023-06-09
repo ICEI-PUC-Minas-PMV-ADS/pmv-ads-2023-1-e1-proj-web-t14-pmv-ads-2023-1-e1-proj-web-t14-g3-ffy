@@ -7,20 +7,25 @@ const listaMesAnterior = document.querySelector('#mesAnterior');
 const listaRealValor = document.querySelector('#realValor');
 const listaIdealValor = document.querySelector('#idealValor');
 const listaRitmo = document.querySelector('#listaRitmo');
+const listaCadSimu = document.querySelector('#listaCadSimu');
 
 var mesAtual = 0;
 var mesAnterior = 0;
 
+                    //TODAS AS FUNÇÕES QUE CONTENHAM "_Simu" foram declaradas no arquivo app-simu.js 
+
 formMes.addEventListener('submit' , (evento => {
-    evento.preventDefault()
+    evento.preventDefault();
     mesAtual = evento.target['mesAtual'].value;
     
     //zera todas as listas ao trocar de mês.
-    listaMesAtual.innerHTML = ""
-    listaMesAnterior.innerHTML = ""
-    listaRealValor.innerHTML = ""
-    listaIdealValor.innerHTML = ""
-    listaRitmo.innerHTML = ""
+    listaMesAtual.innerHTML = "";
+    listaMesAnterior.innerHTML = "";
+    listaRealValor.innerHTML = "";
+    listaIdealValor.innerHTML = "";
+    listaRitmo.innerHTML = "";
+    listaCadSimu.innerHTML = "";
+    listaRelSimu.innerHTML = ""
     
     if (mesAtual === '1') {
         mesAnterior = '12';
@@ -32,6 +37,8 @@ formMes.addEventListener('submit' , (evento => {
     criaItem(itemStorage , mesAnterior, listaMesAnterior);
     criaItem(totalStorage , mesAtual, listaRealValor);
     ritmo(listaRitmo);
+    criaCad_Simu();
+    rel_Simu();
 }))
 
 function criaItem (array , mesEsc , lista ) {
@@ -45,12 +52,15 @@ function criaItem (array , mesEsc , lista ) {
             }
             if (element.tipo == undefined) {
 
+                //valor real
                 constroiItem(element.totalDespesa, "Despesas:", lista);
                 constroiItem(element.economiaMen, "Economia/Investimentos:", lista);
                 constroiItem(element.totalRem, "Remanescente:", lista);
                 
-                x50_30_20(element.totalReceita, listaIdealValor);
-                
+                // lista do 50 30 20
+                constroiItem((element.totalReceita)*0.5, "Despesas:", listaIdealValor);
+                constroiItem((element.totalReceita)*0.3, "Economia/Investimento:", listaIdealValor);
+                constroiItem((element.totalReceita)*0.2, "Remanescente:", listaIdealValor);
             }
         }
        
@@ -70,13 +80,6 @@ function constroiItem(valor , nome , lista) {
     listItem.appendChild(div);
 
     lista.appendChild(listItem);
-}
-
-function x50_30_20(valor, lista) {
-    
-    constroiItem(valor*0.5, "Despesas:", lista);
-    constroiItem(valor*0.3, "Economia/Investimento:", lista);
-    constroiItem(valor*0.2, "Remanescente:", lista);
 }
 
 

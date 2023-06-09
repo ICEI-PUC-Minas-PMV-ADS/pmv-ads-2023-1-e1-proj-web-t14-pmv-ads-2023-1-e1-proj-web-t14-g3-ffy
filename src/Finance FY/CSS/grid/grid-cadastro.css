@@ -1,5 +1,5 @@
 .wrapper {
-    grid-template: repeat(6, auto) / 20% 80%;
+    grid-template: repeat(6, auto) / 20% 1fr;
     gap: 10px;
  }
 

@@ -10,15 +10,15 @@ footer{
     grid-area: 4/1/5/3;
 }
 
+.educacao {
+    grid-area: 2/1/4/2;
+}
+
 /*grid tag main*/
 main{
     display: grid;
     grid-template: auto 1fr / 1fr;
     gap: 10px;
-}
-
-.educacao {
-    grid-area: 2/1/4/2;
 }
 
 .apresentacao{
