@@ -19,7 +19,7 @@
     text-decoration: none;
     color: #FFFFFF;
     background: var(--verde-escuro_bg);
-    padding: 0 4rem;
+    padding: 0 3rem;
     border-radius: 30px;
     transition: 0.3s;
 }
