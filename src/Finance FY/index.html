@@ -7,8 +7,13 @@
             
             <title>Finance FY</title>
             
-            <link rel="stylesheet" href="reset.css">
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="CSS/reset.css">
+            <link rel="stylesheet" href="CSS/style.css">
+            <link rel="stylesheet" href="CSS/mainIndex.css">
+            <link rel="stylesheet" href="CSS/educacao.css">
+            <link rel="stylesheet" href="CSS/grid/grid-index.css">
+            <link rel="stylesheet" href="CSS/responsivo/index-responsivo.css">
+            <link rel="stylesheet" href="CSS/responsivo/style-responsivo.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
@@ -17,78 +22,78 @@
             <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">    
         </head>
 
-        <header>
-            <div class="containerCabec">
-            <img src="Img/abstract-constellation-4f-2560x1440 1.png" class="imgCabecalho">
-            <img src="Img/Desktop - 1logo.png" class="imgLogo">
-            </div>
-            <nav class="menuNav">
-                <li><a class="itemNav" href="index.html">Inicio</a></li>
-                <li><a class="itemNav" href="cadastro.html">Cadastro</a></li>
-                <li><a class="itemNav" href="">Formulários</a></li>
-            </nav>
-        </header>
-        
         <body>
-            <section class="educacao" >
+            <div class="wrapper">
+            <header>
+                <div class="containerCabec flexCentral">
+                <img src="Img/Desktop - 1logo.png" class="imgLogo">
+                </div>
+                <nav class="menuNav">
+                    <li><a class="itemNav" href="index.html">Inicio</a></li>
+                    <li><a class="itemNav" href="cadastro.html">Cadastro</a></li>
+                    <li><a class="itemNav" href="relatorios.html">Relatórios</a></li>
+                </nav>
+            </header>
+            <aside class="educacao" >
                 <h2 class="tituloSecao">Saiba mais:</h2>
                 <ul class="listaEducativa">
-                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
-                    <li><a class="artigoFinanceiro" href="">Artigo Financeiro</a></li>
+                    <li><a class="artigoFinanceiro" href="https://educacao-executiva.fgv.br/cursos/online/curta-media-duracao-online/como-organizar-o-orcamento-familiar" target="_blank">Orçamento Familiar</a></li>
+                    <li><a class="artigoFinanceiro" href="https://www.unibrad.com.br/UniversidadeCorporativa/Curso/InternaCurso/13" target="_blank">Finanças Pessoais</a></li>
+                    <li><a class="artigoFinanceiro" href="https://edu.b3.com.br/play/text/90508921/detalhe" target="_blanck">Ganhos em Férias</a></li>
+                    <li><a class="artigoFinanceiro" href="https://www.youtube.com/playlist?list=PLhnExfBbbmATf0qD0Z7JLTc0RvVoqunGa" target="_blank">InvesTalk Podcast</a></li>
                 </ul>
-            </section>
+            </aside>
             
-            <section class="apresentacao">
-                <h2 class="tituloSecao">Apresentação:</h2>
-                <div>
-                    <p class="textoApr">Bem vindo(a) ao Finance FY, estamos aqui para auxiliar na organização de suas finanças. </p>
-                    <p class="textoApr">Nosso objetivo é mostrar a você boas práticas de gestão financeira para que você alcance suas metas, sejam elas quitar suas dividas e sair do “vermelho” , criar uma reserva de segurança ou até mesmo juntar dinheiro para realização de um sonho.</p>
-                    <p class="textoApr">Além disso ajudamos você a descobrir com qual perfil de investidor você mais se identifica.</p> 
-                </div>
-            </section>
+            <main>
+                <section class="apresentacao secao">
+                    <h2 class="tituloSecao">Apresentação:</h2>
+                    <div>
+                        <p class="textoApr">Bem vindo(a) ao Finance FY, estamos aqui para auxiliar na organização de suas finanças. </p>
+                        <p class="textoApr">Nosso objetivo é mostrar a você boas práticas de gestão financeira para que você alcance suas metas, sejam elas quitar suas dividas e sair do “vermelho” , criar uma reserva de segurança ou até mesmo juntar dinheiro para realização de um sonho.</p>
+                        <p class="textoApr">Além disso ajudamos você a descobrir com qual perfil de investidor você mais se identifica.</p> 
+                    </div>
+                </section>
 
-            <section class="quemSomos">
-                <h2 class="tituloSecao">Quem somos:</h2>
-                <div class="cards">
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Daniel Diniz</span>
-                        <span>Scrum Master</span>
+                <section class="quemSomos secao">
+                    <h2 class="tituloSecao">Quem somos:</h2>
+                    <div class="cards">
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Daniel Diniz</span>
+                            <span>Scrum Master</span>
+                        </div>
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Lucas Veiga</span>
+                            <span>Product Owner</span>
+                        </div>
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Ricardo Vieira</span>
+                            <span>Equipe de Design</span>
+                        </div>
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Guilherme Santos</span>
+                            <span>Desenvolvedor</span>
+                        </div>
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Efraim Santos</span>
+                            <span>Desenvolvedor</span>
+                        </div>
+                        <div class="descDev flexCentral">
+                            <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
+                            <span>Hiago Lourenço</span>
+                            <span>Desenvolvedor</span>
+                        </div>
                     </div>
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Lucas Veiga</span>
-                        <span>Product Owner</span>
-                    </div>
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Ricardo Vieira</span>
-                        <span>Equipe de Design</span>
-                    </div>
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Guilherme Santos</span>
-                        <span>Desenvolvedor</span>
-                    </div>
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Efraim Santos</span>
-                        <span>Desenvolvedor</span>
-                    </div>
-                    <div class="descDev">
-                        <img src="img/WhatsApp Image 2023-05-12 at 22.06.30.jpeg" class="imagemDev">
-                        <span>Hiago Lourenço</span>
-                        <span>Desenvolvedor</span>
-                    </div>
-                </div>
-            </section>
-            
+                </section>
+            </main>
+                            
+            <footer class="flexCentral">
+                <span>Versão: 0.1.0</span>
+            </footer>
+            </div>
         </body>
-        
-        <footer>
-            <span>Versão: 0.0.1</span>
-        </footer>
-        
     </html>

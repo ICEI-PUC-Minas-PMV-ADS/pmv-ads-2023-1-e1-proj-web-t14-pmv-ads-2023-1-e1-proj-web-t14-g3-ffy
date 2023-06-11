@@ -16,6 +16,7 @@ A solução implementada conta com os seguintes módulos:
      - **Saldo** - Dados de todos os meses referentes ao saldo acumulado do usuário.
  - **Hospedagem** - local na Internet onde as páginas são mantidas e acessadas pelo navegador. 
 
+
 ![Fluxo do usuário](img/Arquitetura1.png)
 <center>Fluxo de usuário</center>
 
@@ -27,5 +28,3 @@ que o usuário entra no site, ele é apresentado à tela inicial
 A partir do Menu principal, o usuário poderá ser redirecionado para as telas de Cadastro ou Relatórios (a ser implementa). Ao clicar em algum link da sessão Saiba mais, o usuário será redicionado a um site externo com artigo educativo.
 
 Na tela de Cadastro (2.0 Tela de Cadastro), o usuário poderá inserir suas informações de Receitas e Despesas (2.1 Despesa Adicionada) visualizando o resultado apurado, conhecer seu perfil de investidor através do formulário "Conheça seu perfil de investidor" (2.2 Formulário Ativo) e consultar/enviar dados para a tela Relatórios (3.0 Relatórios).
-
-A tela Relatórios é uma solução à ser implementada na próxima etapa do projeto. Nesta tela, será apresentado o relatório do mês atual, o relatório de projeção para os próximos meses, um formulário para simulação de receitas/despesas e um relatório para a simulação. A tela ainda possuirá a opção de retornar à Home Page e à tela de Cadastro.
