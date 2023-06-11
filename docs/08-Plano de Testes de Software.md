@@ -8,7 +8,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
 |Resultado esperado: |Mensagem de erro |
 |Dados de entrada: |Mês Março / Tipo do Cadastro: Despesa / Nome: Vazio / Valor: 200,00 |
-|Resultado Obtido: |Mensagem de erro “Nome Invalido”  (RE=RO) |
+|Resultado Obtido: |Mensagem de erro “Preencha este campo”  (RE=RO) |
 
 |Caso de Teste: |CT 002 – Campo Valor Vazio|
 |------|-----------------------------------------|
@@ -16,15 +16,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
 |Resultado esperado: |Mensagem de erro |
 |Dados de entrada: |Mês Março / Tipo de Cadastro: Despesa / Nome: João / Valor: Vazio  |
-|Resultado Obtido: |Cadastro realizado (RE!=RO)  |
-
-|Caso de Teste: |CT 003 - Não selecionar o Mês|
-|------|-----------------------------------------|
-|Pré-Condições: |Estar na tela inicial de cadastro |
-|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
-|Resultado esperado: |Mensagem de erro |
-|Dados de entrada: |Mês Março / Tipo do Cadastro: Despesa / Nome: Vazio / Valor: 200,00 |
-|Resultado Obtido: |Mensagem de erro “Favor selecionar o Mês” (RE=RO)  |
+|Resultado Obtido: |Mensagem de erro “Digite um número” (RE=RO)  |
 
 |Caso de Teste: |CT 003 - Não selecionar o Mês|
 |------|-----------------------------------------|
