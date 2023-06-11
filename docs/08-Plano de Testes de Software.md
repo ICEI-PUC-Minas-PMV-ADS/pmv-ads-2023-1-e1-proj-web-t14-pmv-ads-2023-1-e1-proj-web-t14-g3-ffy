@@ -1,19 +1,67 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+|Caso de Teste: |CT 001 – Campo Nome Vazio|
+|------|-----------------------------------------|
+|Pré-Condições: |Estar na tela inicial de cadastro |
+|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
+|Resultado esperado: |Mensagem de erro |
+|Dados de entrada: |Mês Março / Tipo do Cadastro: Despesa / Nome: Vazio / Valor: 200,00 |
+|Resultado Obtido: |Mensagem de erro “Nome Invalido”  (RE=RO) |
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
- 
-## Ferramentas de Testes (Opcional)
+|Caso de Teste: |CT 002 – Campo Valor Vazio|
+|------|-----------------------------------------|
+|Pré-Condições: |Estar na tela inicial de cadastro |
+|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
+|Resultado esperado: |Mensagem de erro |
+|Dados de entrada: |Mês Março / Tipo de Cadastro: Despesa / Nome: João / Valor: Vazio  |
+|Resultado Obtido: |Cadastro realizado (RE!=RO)  |
 
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+|Caso de Teste: |CT 003 - Não selecionar o Mês|
+|------|-----------------------------------------|
+|Pré-Condições: |Estar na tela inicial de cadastro |
+|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
+|Resultado esperado: |Mensagem de erro |
+|Dados de entrada: |Mês Março / Tipo do Cadastro: Despesa / Nome: Vazio / Valor: 200,00 |
+|Resultado Obtido: |Mensagem de erro “Favor selecionar o Mês” (RE=RO)  |
+
+|Caso de Teste: |CT 003 - Não selecionar o Mês|
+|------|-----------------------------------------|
+|Pré-Condições: |Estar na tela inicial de cadastro |
+|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
+|Resultado esperado: |Mensagem de erro |
+|Dados de entrada: |Mês Março / Tipo do Cadastro: Despesa / Nome: Vazio / Valor: 200,00 |
+|Resultado Obtido: |Mensagem de erro “Favor selecionar o Mês” (RE=RO)  |
+
+|Caso de Teste: |CT 004 – Teste tudo selecionado corretamente |
+|------|-----------------------------------------|
+|Pré-Condições: |Estar na tela inicial de cadastro |
+|Procedimentos: |1 O ator deve selecionar um Mês 2 O ator preenche o campo “Tipo do Cadastro” 3 O ator não preenche o campo “Nome” 4 O ator preenche o campo “Valor” 5 O ator clica no botão “Cadastrar” |
+|Resultado esperado: |O cadastro é realizado com sucesso |
+|Dados de entrada: |Mês: Março / Tipo de Cadastro: Receita / Nome: João / Valor: 200,00  |
+|Resultado Obtido: |O cadastro foi realizado com sucesso (RE=RO)  |
+
+|Caso de Teste: |CT 005 – Teste no Menu de Navegação “Inicio” |
+|------|-----------------------------------------|
+|Pré-Condições: |Estar em uma tela diferente da “Inicio”  |
+|Procedimentos: | O ator deve clicar no botão “Inicio”  |
+|Resultado esperado: |Deverá aparecer a tela inicial  |
+|Dados de entrada: |Pagina inicial de Cadastro  |
+|Resultado Obtido: |O aplicativo  levou à tela inicial (RE = RO)  |
+
+|Caso de Teste: |CT 006 – Teste no Menu de Navegação “Cadastro” |
+|------|-----------------------------------------|
+|Pré-Condições: |Estar em uma tela diferente da “Cadastro”  |
+|Procedimentos: | O ator deve clicar no botão “Cadastro”|
+|Resultado esperado: |Deverá aparecer a tela de Cadastro  |
+|Dados de entrada: |Página inicial  |
+|Resultado Obtido: |O aplicativo levou à tela de Cadastro (RE = RO)   |
+
+|Caso de Teste: |CT 007 – Teste no Menu de Navegação “Formulários”  |
+|------|-----------------------------------------|
+|Pré-Condições: |Estar em uma tela diferente da “Formulários”   |
+|Procedimentos: | O ator deve clicar no botão “Formulários”|
+|Resultado esperado: |Deverá aparecer a tela de Formulários  |
+|Dados de entrada: |Página inicial  |
+|Resultado Obtido: |O aplicativo levou à tela de Formulários (RE = RO)    |

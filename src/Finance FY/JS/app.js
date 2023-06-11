@@ -91,6 +91,7 @@ function criaItem(item) {
         const divValor = document.createElement('div');
 
         divValor.dataset.id = item.id;
+        
         novoItem.classList.add("itemCadastrado");
         divValor.classList.add("reais");
         divValor.innerHTML = item.valor;
