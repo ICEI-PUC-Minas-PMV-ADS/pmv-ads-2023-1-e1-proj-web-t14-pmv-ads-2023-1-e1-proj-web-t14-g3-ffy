@@ -189,10 +189,6 @@ function calculaTotal(quemChamou) {
     }
 }
 
-botaoPrincipal.addEventListener('click' , () => {
-    confirm('Você confirma que todos os dados estão corretos?');
-})
-
 function atualizaItem(item) {
     document.querySelector("[data-id='"+item.id+"']").innerHTML = item.valor;
 
