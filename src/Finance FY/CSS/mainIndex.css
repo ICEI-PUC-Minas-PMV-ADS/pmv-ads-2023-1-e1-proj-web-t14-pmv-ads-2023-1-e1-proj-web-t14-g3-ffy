@@ -14,7 +14,7 @@
 }
 
 .descDev {
-    --numero-col: 6;
+    --numero-col: 5;
     --largura-desc:calc(100%/var(--numero-col) - var(--gapCards)) ;
     flex-direction: column;
     border: 1px #ffffff dashed;
