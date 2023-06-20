@@ -19,6 +19,7 @@ function perfilInvestidor () {
             numResInv += parseInt(marcadas[i].value);
         }
         detailsPerfil.innerHTML = classificaInvestidor(numResInv);
+        alert(`Seu perfil de investidor é: ${classificaInvestidor(numResInv)}. \nPesquise sobre o seu perfil e conheça as formas de investir que combine com você!`)
     }
 
 }
