@@ -16,7 +16,6 @@ Propõe-se criar um site  que ajude as pessoas a se organizarem financeiramente,
 * Daniel Diniz Morais
 * Efraim Buarque de Lima Santos
 * Guilherme da Silva Santos Júnior
-* Hiago Augusto de Oliveira Lourenço
 * Lucas Ribeiro Veiga Cruz
 * Ricardo Gomes Vieira
 
@@ -46,12 +45,12 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-1-e1-proj-web-t14-pmv-ads-2023-1-e1-proj-web-t14-g3-ffy/src/financeFY
 
 # Armazenamento do Código-Fonte
 
-* <a href="src/README.md">Código Fonte</a>
+* <a href="src/financeFY">Código Fonte</a>
 
 # Armazenamento da Apresentação
 
-* <a href="presentation/README.md">Apresentação da solução</a>
+* <a href="presentation/V%C3%ADdeo_apresenta%C3%A7%C3%A3o_FFY.mp4">Apresentação da solução</a>
