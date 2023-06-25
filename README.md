@@ -25,7 +25,7 @@ Carlos Alberto Marques Pietrobon
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores quanto nos principais navegadores.
 
 # Documentação
 
