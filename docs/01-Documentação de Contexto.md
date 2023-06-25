@@ -1,7 +1,7 @@
 # Introdução
 
 Desde se organizar nas contas do mês até decidir onde aplicar o seu dinheiro pode ser um problema. A situação tende a piorar ainda mais se a pessoa trabalha e estuda ao mesmo tempo e o pouco tempo que lhe resta, não consegue ficar fazendo contas.
-Com todos estes problemas vindo à tona, torna-se sensato a busca por uma aplicação que de forma rápida e automatizada ajude o usuário a se reorganizar financeiramente; a fim de usar o seu dinheiro da melhor forma possível, e ajude a projetar cenários que considerem o menor desperdício possível.
+Com todos estes problemas vindo a tona, torna-se sensato a busca por uma aplicação que de forma rápida e automatizada ajude o usuário a se reorganizar financeiramente, usando o seu dinheiro da melhor forma possível e ajude projetando cenários que considerem o menor desperdício possível.
 
 
 ## Problema
@@ -9,7 +9,7 @@ Com todos estes problemas vindo à tona, torna-se sensato a busca por uma aplica
 O volume de famílias com dívidas atrasadas tem se elevado em todas as faixas de rendimentos. A problemática deve-se, entre outros fatores, à cultura financeira nacional que prioriza consumo em detrimento do planejamento financeiro. Tal planejamento, visa garantir que despesas de médio e grande porte sejam efetuadas sem o comprometimento da renda ao mesmo tempo em que orienta a pessoa a investir seus ganhos de modo a gerar riqueza individual ou familiar.
 
 ## Objetivos
-Propõe-se, criar uma aplicação que ajude as pessoas a se organizarem financeiramente, e através de ferramentas como dashboards por exemplo, mostre de forma rápida e prática ao cliente seu balanço mensal! 
+Propõe-se, criar uma aplicação que ajude as pessoas a se organizarem financeiramente, e através de ferramentas como relatórios, mostre de forma rápida e prática ao cliente seu balanço mensal! 
 
 ### Objetivo Secundário:
 

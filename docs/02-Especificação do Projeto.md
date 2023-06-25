@@ -18,8 +18,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Wilmer Barros      | Poder registrar meus gastos e lucros| Não esquecer de fazê-las               |
 | Ivan Miguel 	| Ver de forma o destino dos meus gastos. |	Ter uma visão completa do meu balanço mensal. | 
 |Rayssa Ferreira |	Poder inserir novas categorias de conta |	Abranger todas as minhas saídas. | 
-|Ana Luiza |	Registrar meus investimentos. |	Ter o controle sobre os investimentos. |
-|Ana Luiza |	Saber o rendimento dos meus investimentos. |	Ter controle sobre minha receita. |
+|Ana Luiza |	Registrar meus investimentos. |	Ter o controle sobre os investimentos. 
 |Ivan Miguel |	Conhecer meu perfil de investidor. |	Aprender quais tipos de investimento seria o ideal para mim. |
 |Rayssa Ferreira | Comparar minhas despesas mensais | Monitorar minha evolução. |
 
@@ -37,9 +36,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF – 04 |	O site tem de exibir seu balanço mensal levando em conta o modelo financeiro aplicado. | ALTA | 
 |RF – 05 |	O site precisa calcular e exibir um cenário de superávit. | MÉDIA |
 |RF – 06 |  O site deve permitir ao usuário inserir seus investimentos. | MÉDIA-ALTA |
-|RF – 07 |	O site tem de calcular o rendimento destes investimentos. | MÉDIA |
-|RF – 08 |	O site tem de informar ao usuário seu perfil de investidor. | BAIXA |
-|RF - 09 |  O site deve filtrar os resultados categorizados por mês. | ALTA | 
+|RF – 07 |	O site tem de informar ao usuário seu perfil de investidor. | BAIXA |
+|RF - 08 |  O site deve filtrar os resultados categorizados por mês. | ALTA | 
 
 
 
